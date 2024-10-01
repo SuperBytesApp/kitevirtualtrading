@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/emailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:fontFamily="@font/inter_regular"
+            android:background="@drawable/bg_border_button"
+            android:paddingStart="@dimen/dp_10"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@drawable/bg_border_button"
+            android:fontFamily="@font/inter_regular"
+            android:paddingStart="@dimen/dp_10"
+            android:minHeight="48dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_rounded_fund_section"
+            android:text="Login"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/inter_semi_bold"/>
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_70"
+        android:adjustViewBounds="true"
+        android:layout_margin="20dp"
+        android:src="@drawable/spark_ic_launcher_foreground"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<!--    <?xml version="1.0" encoding="utf-8"?>-->
+<!--<androidx.constraintlayout.widget.ConstraintLayout-->
+<!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--xmlns:tools="http://schemas.android.com/tools"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="match_parent"-->
+<!--android:id="@+id/alls"-->
+<!--android:orientation="vertical"-->
+<!--android:padding="16dp">-->
+
+
+<!--<pl.droidsonroids.gif.GifImageView-->
+<!--    android:id="@+id/gifImageView"-->
+<!--    android:layout_width="200dp"-->
+<!--    android:layout_height="200dp"-->
+<!--    android:adjustViewBounds="true"-->
+<!--    android:src="@drawable/logogif"-->
+<!--    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--    app:layout_constraintEnd_toEndOf="parent"-->
+<!--    app:layout_constraintStart_toStartOf="parent"-->
+<!--    app:layout_constraintTop_toTopOf="parent" />-->
+
+
+<!--<androidx.appcompat.widget.AppCompatButton-->
+<!--    android:id="@+id/registerButton"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:background="@drawable/rounded_edittext_bg"-->
+<!--    android:fontFamily="sans-serif-medium"-->
+<!--    android:minHeight="50dp"-->
+<!--    android:text="Join Telegram Channel"-->
+<!--    android:textColor="@color/white"-->
+<!--    android:backgroundTint="#0020CF"-->
+<!--    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--    tools:layout_editor_absoluteX="16dp" />-->
+
+<!--<androidx.appcompat.widget.AppCompatButton-->
+<!--    android:id="@+id/registerButton2"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:background="@drawable/rounded_edittext_bg"-->
+<!--    android:backgroundTint="#FF5722"-->
+<!--    android:fontFamily="sans-serif-medium"-->
+<!--    android:minHeight="50dp"-->
+<!--    android:layout_marginBottom="5dp"-->
+<!--    android:text="LOGIN"-->
+<!--    android:textColor="@color/white"-->
+<!--    app:layout_constraintBottom_toTopOf="@+id/registerButton"-->
+<!--    tools:layout_editor_absoluteX="16dp" />-->
+
+<!--<androidx.cardview.widget.CardView-->
+<!--    android:id="@+id/login"-->
+<!--    android:layout_width="0dp"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:visibility="gone"-->
+<!--    app:cardCornerRadius="10dp"-->
+<!--    app:cardBackgroundColor="#EFEFEF"-->
+<!--    app:cardElevation="0dp"-->
+<!--    android:layout_marginBottom="15dp"-->
+<!--    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--    app:layout_constraintEnd_toEndOf="parent"-->
+<!--    app:layout_constraintStart_toStartOf="parent">-->
+
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/linearLayout3"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:orientation="vertical"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/emailEditText"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="Email"-->
+<!--            android:padding="10dp"-->
+<!--            android:background="@drawable/rounded_edittext_bg"-->
+<!--            android:inputType="textEmailAddress"-->
+<!--            android:minHeight="48dp" />-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/passwordEditText"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="Password"-->
+<!--            android:inputType="textPassword"-->
+<!--            android:padding="10dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:background="@drawable/rounded_edittext_bg"-->
+<!--            android:minHeight="48dp" />-->
+
+<!--        <androidx.appcompat.widget.AppCompatButton-->
+<!--            android:id="@+id/loginButton"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:backgroundTint="#4CAF50"-->
+<!--            android:text="Login"-->
+<!--            android:padding="10dp"-->
+<!--            android:background="@drawable/rounded_edittext_bg"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textStyle="bold" />-->
+
+
+<!--    </LinearLayout>-->
+
+
+<!--</androidx.cardview.widget.CardView>-->
+
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editTextMarketExp1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Market Exp 1"
+        android:inputType="text" />
+
+
+    <RadioGroup
+        android:id="@+id/radioGroups"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ltpmax">
+
+        <RadioButton
+            android:id="@+id/radioButtonsgreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="normal"
+            android:textColor="#000000" />
+
+        <RadioButton
+            android:id="@+id/radioButtonsred"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="red"
+            android:textColor="#000000" />
+    </RadioGroup>
+
+
+
+    <EditText
+        android:id="@+id/editTextMarketExp2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Market Exp 2"
+        android:inputType="text" />
+
+
+    <RadioGroup
+        android:id="@+id/radioGroups2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ltpmax">
+
+        <RadioButton
+            android:id="@+id/radioButtons2green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="normal"
+            android:textColor="#000000" />
+
+        <RadioButton
+            android:id="@+id/radioButtons2red"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="red"
+            android:textColor="#000000" />
+    </RadioGroup>
+
+
+
+</LinearLayout>

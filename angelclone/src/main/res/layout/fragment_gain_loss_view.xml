@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:tag="layout/fragment_gain_loss_view_0">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTotalGainLoss"
+        style="@style/barlowMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:tag="binding_1"
+        android:textColor="@color/gainLossTitleColor"
+        app:layout_constraintBottom_toBottomOf="@+id/txtBottomSheetTotalPrice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtBottomSheetTotalPrice" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/filteredSelection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:orientation="horizontal"
+        android:tag="binding_2"
+        app:layout_constraintBottom_toBottomOf="@+id/txtBottomSheetTotalPrice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtBottomSheetTotalPrice">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/radioTotalGainLoss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:gravity="center"
+            android:paddingStart="@dimen/dp_6"
+            android:tag="binding_3" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/radioFilteredGainLoss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_8"
+            android:gravity="center"
+            android:paddingStart="@dimen/dp_6"
+            android:tag="binding_4" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtBottomSheetTotalPrice"
+        style="@style/barlowSemiBoldMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:tag="binding_5"
+        android:textColor="@color/gainLossTitleColor"
+        app:layout_constraintBottom_toBottomOf="@+id/ivRightArrow"
+        app:layout_constraintEnd_toStartOf="@+id/ivRightArrow"
+        app:layout_constraintTop_toTopOf="@+id/ivRightArrow" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivRightArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:tag="binding_6"
+        android:tint="@color/gainLossTitleColor"
+        app:layout_constraintBottom_toTopOf="@+id/seprator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow_up_white" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/labelBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="filteredSelection,txtBottomSheetTotalPrice" />
+
+    <View
+        android:id="@+id/seprator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#c2c6cc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelBarrier" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView7"
+        style="@style/barlowSemiBoldSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=":"
+        android:textColor="@color/title_black_both"
+        app:layout_constraintBottom_toBottomOf="@+id/appCompatTextView26"
+        app:layout_constraintStart_toEndOf="@+id/appCompatTextView26"
+        app:layout_constraintTop_toTopOf="@+id/appCompatTextView26" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView26"
+        android:layout_width="@dimen/dp_250"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_12"
+        android:text="Unrealised Gain and Loss"
+        android:textColor="@color/title_black_both"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seprator" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtBottomSheetTotalUnrealisedGain"
+        style="@style/barlowSemiBoldSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:tag="binding_7"
+        android:textColor="@color/title_black_both"
+        app:layout_constraintBottom_toBottomOf="@+id/appCompatTextView26"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/appCompatTextView26" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView8"
+        style="@style/barlowSemiBoldSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=":"
+        android:textColor="@color/title_black_both"
+        app:layout_constraintBottom_toBottomOf="@+id/appCompatTextView9"
+        app:layout_constraintStart_toEndOf="@+id/appCompatTextView9"
+        app:layout_constraintTop_toTopOf="@+id/appCompatTextView9"
+        app:layout_constraintVertical_bias="0" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView9"
+        android:layout_width="@dimen/dp_250"
+        android:layout_height="14dp"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_12"
+        android:text="Realised Gain and Loss"
+        android:textColor="@color/title_black_both"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView26" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtBottomSheetTotalRealisedGain"
+        style="@style/barlowSemiBoldSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:tag="binding_8"
+        android:textColor="@color/title_black_both"
+        app:layout_constraintBottom_toBottomOf="@+id/appCompatTextView9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/appCompatTextView9" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView27"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:text="Total Gain/Loss = Unrealised + Realised Gain and Loss"
+        android:textColor="@color/title_black_both"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView8" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/mtm_botom_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="binding_9"
+        app:constraint_referenced_ids="seprator,appCompatTextView7,appCompatTextView26,txtBottomSheetTotalUnrealisedGain,appCompatTextView8,appCompatTextView9,txtBottomSheetTotalRealisedGain,appCompatTextView27" />
+</androidx.constraintlayout.widget.ConstraintLayout>

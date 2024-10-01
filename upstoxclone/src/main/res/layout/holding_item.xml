@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/itemid"
+    android:background="@color/background2"
+    android:layout_height="wrap_content">
+
+
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:gravity="center"
+        android:text="Qty."
+        android:fontFamily="@font/inter_regular"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:textAlignment="center"
+        android:textColor="#C3898989"
+        android:textSize="13sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:gravity="center"
+        android:text="1"
+        android:fontFamily="@font/inter_regular"
+        android:textAlignment="center"
+        android:textColor="#C3898989"
+        android:textSize="13sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/textView21"
+        app:layout_constraintStart_toEndOf="@+id/textView21"
+        app:layout_constraintTop_toTopOf="@+id/textView21" />
+
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Avg."
+        android:textAlignment="center"
+        android:textColor="#C3898989"
+        android:textSize="13sp"
+        android:fontFamily="@font/inter_regular"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="@+id/totalp"
+        app:layout_constraintTop_toTopOf="@+id/invested" />
+
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="0.98"
+        android:textAlignment="center"
+        android:textColor="#C3898989"
+        android:layout_marginEnd="@dimen/dp_5"
+        android:textSize="13sp"
+        android:fontFamily="@font/inter_regular"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/textView23"
+        app:layout_constraintEnd_toStartOf="@+id/textView23"
+        app:layout_constraintTop_toTopOf="@+id/textView23" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="VEDL EQ"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:fontFamily="@font/messina_sans_semi_bold"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Invested"
+        android:fontFamily="@font/inter_regular"
+        android:layout_marginTop="@dimen/dp_5"
+        android:textAlignment="center"
+        android:textColor="#C3898989"
+        android:textSize="13sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="+0.13"
+        android:layout_marginEnd="@dimen/dp_5"
+        android:fontFamily="@font/messina_sans_semi_bold"
+        android:textAlignment="center"
+        android:textColor="#4CAF50"
+        android:textSize="15sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/totalp"
+        app:layout_constraintEnd_toStartOf="@+id/totalp"
+        app:layout_constraintTop_toTopOf="@+id/totalp" />
+
+
+    <TextView
+        android:id="@+id/totalp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:text="(+18.13%)"
+        android:textAlignment="center"
+        android:fontFamily="@font/inter_regular"
+        android:textColor="#4CAF50"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+
+    <TextView
+        android:id="@+id/boostp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="(+18.13%)"
+        android:layout_marginEnd="@dimen/dp_5"
+        android:fontFamily="@font/inter_regular"
+        android:textAlignment="center"
+        android:textColor="#4CAF50"
+        android:textSize="13sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toStartOf="@+id/textView28"
+        app:layout_constraintTop_toTopOf="@+id/textView28" />
+
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="LTP"
+        android:textAlignment="center"
+        android:textColor="#C3898989"
+        android:textSize="13sp"
+        android:textStyle="normal"
+        android:fontFamily="@font/inter_regular"
+        app:layout_constraintEnd_toEndOf="@+id/textView23"
+        app:layout_constraintTop_toTopOf="@+id/textView21" />
+
+
+    <TextView
+        android:id="@+id/invested"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="38,033,00"
+        android:layout_marginStart="5dp"
+        android:textAlignment="center"
+        android:textColor="#C3898989"
+        android:textSize="13sp"
+        android:fontFamily="@font/inter_regular"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/textView24"
+        app:layout_constraintStart_toEndOf="@+id/textView24"
+        app:layout_constraintTop_toTopOf="@+id/textView24" />
+
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="1.12"
+        android:textColor="#C3898989"
+        android:layout_marginEnd="@dimen/dp_5"
+        android:textSize="13sp"
+        android:fontFamily="@font/inter_regular"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toStartOf="@+id/boostp"
+        app:layout_constraintTop_toTopOf="@+id/boostp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

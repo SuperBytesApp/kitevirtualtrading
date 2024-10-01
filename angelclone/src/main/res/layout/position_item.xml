@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@color/card_background_color"-->
+<!--        android:paddingBottom="@dimen/dp_12"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+
+<!--        <com.google.android.material.textview.MaterialTextView-->
+<!--            android:id="@+id/txtPositionAdapterStockName"-->
+<!--            style="@style/barlowRegularLarge"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="@dimen/dp_16"-->
+<!--            android:layout_marginTop="@dimen/dp_12"-->
+<!--            android:tag="binding_1"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--        <com.google.android.material.textview.MaterialTextView-->
+<!--            android:id="@+id/txtPositionAdapterGainloss"-->
+<!--            style="@style/barlowRegularLarge"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginEnd="@dimen/dp_16"-->
+<!--            android:gravity="end"-->
+<!--            android:tag="binding_2"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/txtPositionAdapterStockName"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/txtPositionAdapterStockName" />-->
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/flexTags"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="@dimen/dp_16"-->
+<!--            android:layout_marginTop="@dimen/dp_8"-->
+<!--            app:alignContent="flex_start"-->
+<!--            app:flexWrap="wrap"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/txtPositionAdapterPrefixLTP"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/txtPositionAdapterStockName">-->
+
+<!--            <com.google.android.material.textview.MaterialTextView-->
+<!--                android:id="@+id/tv_tag_buy_sell"-->
+<!--                style="@style/sparkTextViewTAG"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginEnd="@dimen/dp_4"-->
+<!--                android:layout_marginBottom="@dimen/dp_4"-->
+<!--                android:background="@drawable/bg_gray_round_tag"-->
+<!--                android:paddingLeft="@dimen/dp_4"-->
+<!--                android:paddingTop="@dimen/dp_2"-->
+<!--                android:paddingRight="@dimen/dp_4"-->
+<!--                android:paddingBottom="@dimen/dp_2"-->
+<!--                android:tag="binding_3"-->
+<!--                android:textSize="@dimen/sp_10" />-->
+
+<!--            <com.google.android.material.textview.MaterialTextView-->
+<!--                android:id="@+id/lyt_tag"-->
+<!--                style="@style/sparkTextViewTAG"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginEnd="@dimen/dp_4"-->
+<!--                android:layout_marginBottom="@dimen/dp_4"-->
+<!--                android:background="@drawable/bg_gray_round_tag"-->
+<!--                android:paddingLeft="@dimen/dp_4"-->
+<!--                android:paddingTop="@dimen/dp_2"-->
+<!--                android:paddingRight="@dimen/dp_4"-->
+<!--                android:paddingBottom="@dimen/dp_2"-->
+<!--                android:tag="binding_4"-->
+<!--                android:textSize="@dimen/sp_10"-->
+<!--                android:visibility="visible" />-->
+
+<!--            <com.google.android.material.textview.MaterialTextView-->
+<!--                android:id="@+id/exg_tag"-->
+<!--                style="@style/sparkTextViewTAG"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginEnd="@dimen/dp_4"-->
+<!--                android:layout_marginBottom="@dimen/dp_4"-->
+<!--                android:background="@drawable/bg_gray_round_tag"-->
+<!--                android:paddingLeft="@dimen/dp_4"-->
+<!--                android:paddingTop="@dimen/dp_2"-->
+<!--                android:paddingRight="@dimen/dp_4"-->
+<!--                android:paddingBottom="@dimen/dp_2"-->
+<!--                android:tag="binding_5"-->
+<!--                android:textSize="@dimen/sp_10" />-->
+<!--        </androidx.cardview.widget.CardView>-->
+
+<!--        <com.google.android.material.textview.MaterialTextView-->
+<!--            android:id="@+id/txtPositionAdapterQuantity"-->
+<!--            style="@style/barlowRegularSmall"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="@dimen/dp_4"-->
+<!--            android:tag="binding_6"-->
+<!--            android:textColor="@color/title_black"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/flexTags"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/flexTags" />-->
+
+<!--        <com.google.android.material.textview.MaterialTextView-->
+<!--            android:id="@+id/txtPositionAdapterQuantityText"-->
+<!--            style="@style/barlowRegular"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="2dp"-->
+<!--            android:tag="binding_7"-->
+<!--            android:textColor="@color/body_grey"-->
+<!--            android:textSize="@dimen/sp_11"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/txtPositionAdapterQuantity"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/txtPositionAdapterQuantity"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/txtPositionAdapterQuantity" />-->
+
+<!--        <com.google.android.material.textview.MaterialTextView-->
+<!--            android:id="@+id/tvLotSize"-->
+<!--            style="@style/barlowRegular"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="@dimen/dp_2"-->
+<!--            android:layout_marginEnd="@dimen/dp_16"-->
+<!--            android:tag="binding_8"-->
+<!--            android:textColor="@color/body_grey"-->
+<!--            android:textSize="@dimen/sp_11"-->
+<!--            android:visibility="gone"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/txtPositionAdapterQuantityText"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/txtPositionAdapterQuantityText"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/txtPositionAdapterQuantityText" />-->
+
+<!--        <com.google.android.material.textview.MaterialTextView-->
+<!--            style="@style/barlowRegular"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginEnd="@dimen/dp_2"-->
+<!--            android:text="@string/avg_with_rs"-->
+<!--            android:textColor="@color/body_grey"-->
+<!--            android:textSize="@dimen/sp_11"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/re_text"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/re_text"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/re_text" />-->
+
+<!--        <com.google.android.material.textview.MaterialTextView-->
+<!--            android:id="@+id/re_text"-->
+<!--            style="@style/barlowRegularSmall"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginEnd="@dimen/dp_2"-->
+<!--            android:text="₹"-->
+<!--            android:textSize="@dimen/sp_12"-->
+<!--            android:visibility="gone"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/txtPositionAdapterNetAvgPrice"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/txtPositionAdapterNetAvgPrice"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/txtPositionAdapterNetAvgPrice" />-->
+
+<!--        <com.google.android.material.textview.MaterialTextView-->
+<!--            android:id="@+id/txtPositionAdapterNetAvgPrice"-->
+<!--            style="@style/barlowRegularSmall"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="@dimen/dp_8"-->
+<!--            android:layout_marginEnd="@dimen/dp_16"-->
+<!--            android:tag="binding_9"-->
+<!--            app:layout_constraintEnd_toEndOf="0"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/txtPositionAdapterLTP" />-->
+
+<!--        <com.google.android.material.textview.MaterialTextView-->
+<!--            android:id="@+id/txtPositionAdapterPrefixLTP"-->
+<!--            style="@style/barlowRegularSmall"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginEnd="@dimen/dp_4"-->
+<!--            android:text="@string/ltp_prefix"-->
+<!--            android:textColor="@color/body_grey"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/txtPositionAdapterLTPDifference"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/txtPositionAdapterLTP"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/txtPositionAdapterLTPDifference" />-->
+
+<!--        <com.google.android.material.textview.MaterialTextView-->
+<!--            android:id="@+id/txtPositionAdapterLTP"-->
+<!--            style="@style/barlowRegularMedium"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginEnd="@dimen/dp_4"-->
+<!--            android:tag="binding_10"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/txtPositionAdapterLTPDifference"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/txtPositionAdapterLTPDifference"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/txtPositionAdapterLTPDifference" />-->
+
+<!--        <com.google.android.material.textview.MaterialTextView-->
+<!--            android:id="@+id/txtPositionAdapterLTPDifference"-->
+<!--            style="@style/barlowRegularMedium"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="@dimen/dp_8"-->
+<!--            android:layout_marginEnd="@dimen/dp_16"-->
+<!--            android:gravity="center"-->
+<!--            android:tag="binding_11"-->
+<!--            android:textColor="@color/light_body_grey"-->
+<!--            app:layout_constraintEnd_toEndOf="0"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/txtPositionAdapterGainloss" />-->
+
+<!--        <com.google.android.material.textview.MaterialTextView-->
+<!--            android:id="@+id/txtStockValidity"-->
+<!--            style="@style/barlowRegularMedium"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="@dimen/dp_2"-->
+<!--            android:layout_marginEnd="@dimen/dp_8"-->
+<!--            android:tag="binding_12"-->
+<!--            android:textColor="@color/body_grey"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/txtPositionAdapterStockName"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/txtPositionAdapterGainloss"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/txtPositionAdapterStockName"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/txtPositionAdapterStockName" />-->
+
+<!--        <androidx.constraintlayout.widget.Guideline-->
+<!--            android:id="@+id/guideline"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:foregroundGravity="center"-->
+<!--            android:orientation="vertical"-->
+<!--            app:layout_constraintEnd_toEndOf="0"-->
+<!--            app:layout_constraintEnd_toStartOf="0"-->
+<!--            app:layout_constraintGuide_percent="0.45"-->
+<!--            app:layout_constraintStart_toEndOf="0"-->
+<!--            app:layout_constraintStart_toStartOf="0" />-->
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/clWatchlistItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_color"
+    android:tag="layout/adapter_watchlist_item_0">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvScriptTitle"
+        style="@style/barlowMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_8"
+        android:gravity="start"
+        android:text="NIFTY"
+        android:maxLines="2"
+        android:tag="binding_1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvScriptSegment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_6"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:fontFamily="@font/app_font_regular"
+        android:tag="binding_2"
+        android:text="NSE FO"
+        android:textColor="@color/title_black"
+        android:textSize="@dimen/sp_11"
+        app:layout_constraintBottom_toTopOf="@+id/nudge_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvScriptSubTitle" />
+
+    <View
+        android:id="@+id/view_between"
+        android:layout_width="@dimen/dp_1"
+        android:layout_height="@dimen/dp_11"
+        android:layout_marginStart="@dimen/dp_8"
+        android:tag="binding_3"
+        app:layout_constraintBottom_toBottomOf="@+id/tvScriptSegment"
+        app:layout_constraintStart_toEndOf="@+id/tvScriptSegment"
+        app:layout_constraintTop_toTopOf="@+id/tvScriptSegment" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvScriptSubTitle"
+        style="@style/barlowRegularSmall"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_8"
+        android:gravity="start"
+        android:tag="binding_4"
+        android:textColor="@color/body_grey"
+        android:visibility="visible"
+        android:text="21-DEC-23 213000 CE"
+        app:layout_constraintBottom_toBottomOf="@+id/tvScriptTitle"
+        app:layout_constraintEnd_toStartOf="@+id/tvScriptPrice"
+        app:layout_constraintStart_toEndOf="@+id/tvScriptTitle"
+        app:layout_constraintTop_toTopOf="@+id/tvScriptTitle" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/holdingCnt"
+        style="@style/barlowMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_5"
+        android:drawablePadding="@dimen/dp_3"
+        android:tag="binding_5"
+        android:textColor="@color/body_grey"
+        android:textSize="@dimen/sp_11"
+        app:layout_constraintBottom_toBottomOf="@+id/tvScriptSegment"
+        app:layout_constraintStart_toEndOf="@+id/view_between"
+        app:layout_constraintTop_toTopOf="@+id/tvScriptSegment" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvBuySellCount"
+        style="@style/barlowMediumSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_7"
+        android:drawablePadding="@dimen/dp_3"
+        android:tag="binding_6"
+        android:textColor="@color/body_grey"
+        android:textSize="@dimen/sp_11"
+        app:layout_constraintBottom_toBottomOf="@+id/tvScriptSegment"
+        app:layout_constraintStart_toEndOf="@+id/holdingCnt"
+        app:layout_constraintTop_toTopOf="@+id/tvScriptSegment"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_tag1"
+        style="@style/barlowRegularSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_8"
+        android:background="@drawable/bg_round_corners_green"
+        android:padding="@dimen/dp_4"
+        android:tag="binding_7"
+        android:textColor="@color/buy_green"
+        android:textSize="@dimen/sp_11"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/txtEvents"
+        app:layout_constraintStart_toEndOf="@+id/txtEvents"
+        app:layout_constraintTop_toTopOf="@+id/txtEvents" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tagsCount"
+        style="@style/segmentContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_4"
+        android:background="@drawable/bg_rectangle_grey_curve"
+        android:gravity="top"
+        android:textColor="@color/title_black"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_tag1"
+        app:layout_constraintStart_toEndOf="@+id/txt_tag1"
+        app:layout_constraintTop_toTopOf="@+id/txt_tag1" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtEvents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_4"
+        android:drawablePadding="@dimen/dp_2"
+        android:gravity="center_vertical"
+        android:paddingTop="@dimen/dp_2"
+        android:paddingBottom="@dimen/dp_2"
+        android:text="@string/event"
+        android:textColor="@color/primary_blue"
+        android:textSize="@dimen/sp_11"
+        android:visibility="gone"
+        app:drawableStartCompat="@drawable/ic_stars"
+        app:layout_constraintBottom_toBottomOf="@+id/tvScriptTitle"
+        app:layout_constraintStart_toEndOf="@+id/tvScriptTitle"
+        app:layout_constraintTop_toTopOf="@+id/tvScriptTitle"
+        app:layout_goneMarginStart="@dimen/dp_16" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvScriptPrice"
+        style="@style/barlowMedium"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:gravity="end"
+        android:tag="binding_8"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvScriptPerChange"
+        style="@style/barlowMediumSmall"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_4"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginBottom="8dp"
+        android:gravity="end"
+        android:textColor="@color/body_grey"
+        app:layout_constraintBottom_toTopOf="@+id/nudge_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvScriptPrice" />
+
+    <FrameLayout
+        android:id="@+id/nudge_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/dp_12"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_12"
+        android:layout_marginBottom="5dp"
+        android:background="@color/white_color"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/horizontal"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_1"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:background="@color/line_grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

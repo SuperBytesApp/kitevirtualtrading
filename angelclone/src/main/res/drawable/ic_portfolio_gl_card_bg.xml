@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt" android:height="154dp" android:width="344dp" android:viewportWidth="344" android:viewportHeight="154">
+    <group>
+        <clip-path android:pathData="M336,0H8C3.58,0 0,3.06 0,6.84V147.16C0,150.94 3.58,154 8,154H336C340.42,154 344,150.94 344,147.16V6.84C344,3.06 340.42,0 336,0Z"/>
+        <path android:fillColor="@drawable/res_0x7f0800d4_ic_portfolio_gl_card_bg__0" android:pathData="M336,0H8C3.58,0 0,3.06 0,6.84V147.16C0,150.94 3.58,154 8,154H336C340.42,154 344,150.94 344,147.16V6.84C344,3.06 340.42,0 336,0Z"/>
+        <path android:fillColor="@drawable/res_0x7f0800d5_ic_portfolio_gl_card_bg__1" android:pathData="M120.18,-120.3L68.71,-94.88C64.75,-92.92 63.54,-88.37 66.01,-84.7L230.56,159.14C233.03,162.8 238.25,164.18 242.21,162.23L293.68,136.8C297.64,134.84 298.85,130.29 296.38,126.63L131.83,-117.21C129.36,-120.88 124.14,-122.26 120.18,-120.3Z" android:fillAlpha="0.5"/>
+        <path android:fillColor="@drawable/res_0x7f0800d6_ic_portfolio_gl_card_bg__2" android:pathData="M-113.74,-33.46L-114.11,-33.28C-118.08,-31.32 -119.28,-26.77 -116.81,-23.1L47.74,220.74C50.21,224.4 55.42,225.78 59.39,223.82L59.76,223.64C63.72,221.68 64.93,217.13 62.46,213.46L-102.09,-30.38C-104.56,-34.04 -109.78,-35.42 -113.74,-33.46Z" android:fillAlpha="0.1"/>
+    </group>
+</vector>

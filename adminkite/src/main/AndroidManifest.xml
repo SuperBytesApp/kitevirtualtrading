@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/kite"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/kite"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.KiteVirtualTrading">
+        <activity
+            android:name=".AngelListAcitivity"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityAngelUserRegister"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UpstoxUserRegister"
+            android:exported="false" />
+        <activity
+            android:name=".UpstoxListAcitivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminPanelActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

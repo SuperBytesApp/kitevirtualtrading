@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "503057692817",
+    "firebase_url": "https://kite-virtual-trading-default-rtdb.firebaseio.com",
+    "project_id": "kite-virtual-trading",
+    "storage_bucket": "kite-virtual-trading.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:503057692817:android:72edda2c6792f176ace730",
+        "android_client_info": {
+          "package_name": "com.clone.adminkite"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "503057692817-h1ln93dur6lkqc0s86ffqmebd6gggj0j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBINVugirAnyrPHNbqUTwDxEaktXVyewYw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "503057692817-h1ln93dur6lkqc0s86ffqmebd6gggj0j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:503057692817:android:0af089385938e5edace730",
+        "android_client_info": {
+          "package_name": "com.clone.kitevirtualtrading"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "503057692817-h1ln93dur6lkqc0s86ffqmebd6gggj0j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBINVugirAnyrPHNbqUTwDxEaktXVyewYw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "503057692817-h1ln93dur6lkqc0s86ffqmebd6gggj0j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

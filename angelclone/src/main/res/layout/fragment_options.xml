@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_grey"
+    android:tag="layout/explore_static_options_watchlist_page_0">
+
+
+    <LinearLayout
+        android:id="@+id/elMarketIndices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clMarketIndices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_color">
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/dp_2"
+                android:background="@color/background_grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/indicesCLView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_12"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginEnd="@dimen/dp_12"
+                android:layout_marginBottom="@dimen/dp_12"
+                android:background="@drawable/nifty_background"
+                android:padding="@dimen/dp_12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view">
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="@dimen/dp_2"
+                    android:layout_height="@dimen/dp_0"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:layout_marginEnd="@dimen/dp_5"
+                    android:layout_marginBottom="@dimen/dp_12"
+                    android:background="@color/line_grey"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clFirstPosIndices"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/view3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvFirstPosTitle"
+                        style="@style/barlowMedium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nifty_text"
+                        android:textColor="@color/body_grey"
+                        android:textSize="@dimen/sp_12"
+                        app:layout_constraintBottom_toTopOf="@+id/tvFirstPosPriceChange"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvFirstPosPriceChange"
+                        style="@style/barlowMedium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:drawablePadding="@dimen/dp_2"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/sell_red"
+                        app:drawableEndCompat="@drawable/ic_arrow_drop_down"
+                        app:layout_constraintBottom_toTopOf="@+id/tvFirstPosPercentageChange"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvFirstPosTitle" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvFirstPosPercentageChange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:text="-59.90 (-0.07%)"
+                        android:textColor="@color/body_grey"
+                        android:textSize="@dimen/sp_12"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvFirstPosPriceChange" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clSecondPosIndices"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:paddingStart="@dimen/dp_10"
+                    android:paddingEnd="@dimen/dp_10"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ivChooseMarket"
+                    app:layout_constraintStart_toEndOf="@+id/clFirstPosIndices"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvSecondPosTitle"
+                        style="@style/barlowMedium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="BANKNIFTY"
+                        android:textColor="@color/body_grey"
+                        android:textSize="@dimen/sp_12"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvSecondPosPriceChange"
+                        style="@style/barlowMedium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:drawablePadding="@dimen/dp_2"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/buy_green"
+                        app:drawableEndCompat="@drawable/ic_arrow_drop_up"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvSecondPosTitle" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvSecondPosPercentageChange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:text="-59.90 (-0.07%)"
+                        android:textColor="@color/body_grey"
+                        android:textSize="@dimen/sp_12"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvSecondPosPriceChange" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivChooseMarket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/dp_8"
+                    android:paddingTop="@dimen/dp_12"
+                    android:paddingBottom="@dimen/dp_5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_down_arrow_grey" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutTime"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/indicesCLView">
+
+                <View
+                    android:id="@+id/divider1"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_1"
+                    android:layout_marginTop="@dimen/dp_9"
+                    android:background="@color/line_grey"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/exploreMainIndicesTabsCl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_12"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:background="@drawable/opt_watchlist_tab_group_bg"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divider1">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/niftyTab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:fontFamily="@font/app_font_regular"
+                        android:paddingStart="@dimen/dp_16"
+                        android:paddingTop="@dimen/dp_8"
+                        android:paddingEnd="@dimen/dp_16"
+                        android:paddingBottom="@dimen/dp_8"
+                        android:text="@string/nifty"
+                        android:textColor="@color/light_title_black"
+                        android:textSize="@dimen/sp_9"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/bankNiftyTab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/primary_blue"
+                        android:fontFamily="@font/app_font_regular"
+                        android:paddingStart="@dimen/dp_16"
+                        android:paddingTop="@dimen/dp_8"
+                        android:paddingEnd="@dimen/dp_16"
+                        android:paddingBottom="@dimen/dp_8"
+                        android:text="BANKNIFTY"
+                        android:textColor="@color/white_color"
+                        android:textSize="@dimen/sp_9"
+                        app:layout_constraintBottom_toBottomOf="@+id/niftyTab"
+                        app:layout_constraintStart_toEndOf="@+id/niftyTab"
+                        app:layout_constraintTop_toTopOf="@+id/niftyTab" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/finNiftyTab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:checked="true"
+                        android:fontFamily="@font/app_font_regular"
+                        android:paddingStart="@dimen/dp_16"
+                        android:paddingTop="@dimen/dp_8"
+                        android:paddingEnd="@dimen/dp_16"
+                        android:paddingBottom="@dimen/dp_8"
+                        android:text="FINNIFTY"
+                        android:textColor="@color/light_title_black"
+                        android:textSize="@dimen/sp_9"
+                        app:layout_constraintBottom_toBottomOf="@+id/niftyTab"
+                        app:layout_constraintStart_toEndOf="@+id/bankNiftyTab"
+                        app:layout_constraintTop_toTopOf="@+id/niftyTab" />
+
+                    <View
+                        android:id="@+id/finNiftyTabDivider"
+                        android:layout_width="@dimen/dp_1"
+                        android:layout_height="@dimen/dp_0"
+                        android:background="@color/line_grey"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/finNiftyTab"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/selectIndices"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/app_font_medium"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="4dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/finNiftyTabDivider"
+                        app:layout_constraintStart_toEndOf="@+id/finNiftyTabDivider"
+                        app:layout_constraintTop_toTopOf="@+id/finNiftyTab"
+                        app:srcCompat="@drawable/ic_arrow_down_new_black" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/exploreCallPutTabsCl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_marginEnd="@dimen/dp_12"
+                    android:background="@drawable/opt_watchlist_tab_group_bg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divider1">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/putTab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:fontFamily="@font/app_font_regular"
+                        android:paddingStart="@dimen/dp_16"
+                        android:paddingTop="@dimen/dp_8"
+                        android:paddingEnd="@dimen/dp_16"
+                        android:paddingBottom="@dimen/dp_8"
+                        android:text="@string/put"
+                        android:textColor="@color/light_title_black"
+                        android:textSize="@dimen/sp_9"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/callTab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/primary_blue"
+                        android:fontFamily="@font/app_font_regular"
+                        android:paddingStart="@dimen/dp_16"
+                        android:paddingTop="@dimen/dp_8"
+                        android:paddingEnd="@dimen/dp_16"
+                        android:paddingBottom="@dimen/dp_8"
+                        android:text="@string/call"
+                        android:textColor="@color/white_color"
+                        android:textSize="@dimen/sp_9"
+                        app:layout_constraintBottom_toBottomOf="@+id/putTab"
+                        app:layout_constraintEnd_toStartOf="@+id/putTab"
+                        app:layout_constraintTop_toTopOf="@+id/putTab" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvChartsCTA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_4"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:drawableStart="@drawable/ic_chart_cta_icon"
+                    android:fontFamily="@font/app_font_medium"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_8"
+                    android:text="@string/charts"
+                    android:textAllCaps="true"
+                    android:textColor="@color/light_primary_blue"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/exploreMainIndicesTabsCl" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvOptionChainCTA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_option_chain_cta_icon"
+                    android:fontFamily="@font/app_font_medium"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/dp_8"
+                    android:paddingBottom="@dimen/dp_8"
+                    android:text="@string/option_chain"
+                    android:textAllCaps="true"
+                    android:textColor="@color/light_primary_blue"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvChartsCTA"
+                    app:layout_constraintStart_toEndOf="@+id/tvChartsCTA"
+                    app:layout_constraintTop_toTopOf="@+id/tvChartsCTA" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvFilterValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_0"
+                    android:layout_marginEnd="@dimen/dp_12"
+                    android:drawableEnd="@drawable/ic_arrow_down_new_black"
+                    android:fontFamily="@font/app_font_medium"
+                    android:gravity="center"
+                    android:text="Expiry 24-Nov-22"
+                    android:textColor="@color/color_F29_black"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvOptionChainCTA"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tvOptionChainCTA" />
+
+                <View
+                    android:id="@+id/viewLineTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:layout_marginTop="@dimen/dp_2"
+                    android:background="@color/line_grey"
+                    app:layout_constraintTop_toBottomOf="@+id/tvChartsCTA" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="@dimen/dp_0"-->
+    <!--android:orientation="vertical"-->
+    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/elMarketIndices">-->
+
+    <!--<androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--    android:id="@+id/cldummyWatchlistItem1"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:background="@color/white_color"-->
+    <!--    android:paddingLeft="@dimen/dp_12"-->
+    <!--    android:paddingTop="@dimen/dp_12"-->
+    <!--    android:paddingRight="@dimen/dp_12">-->
+
+    <!--    <androidx.appcompat.widget.AppCompatTextView-->
+    <!--        android:id="@+id/tvScriptTitle1"-->
+    <!--        style="@style/barlowMediumLarge"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:gravity="start"-->
+    <!--        android:maxLines="2"-->
+    <!--        android:text="BankNifty"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/tvScriptSubTitle1"-->
+    <!--        app:layout_constraintLeft_toLeftOf="0"-->
+    <!--        app:layout_constraintTop_toTopOf="0" />-->
+
+    <!--    <androidx.appcompat.widget.AppCompatTextView-->
+    <!--        android:id="@+id/tvScriptSegment1"-->
+    <!--        style="@style/segmentContainer"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:background="@drawable/itm_tag_bg"-->
+    <!--        android:text="@string/itm"-->
+    <!--        android:textColor="@color/title_black"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/tvScriptTitle1"-->
+    <!--        app:layout_constraintLeft_toRightOf="@+id/tvScriptTitle1"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/tvScriptTitle1" />-->
+
+    <!--    <androidx.appcompat.widget.AppCompatTextView-->
+    <!--        android:id="@+id/tvScriptSubTitle1"-->
+    <!--        style="@style/barlowRegularSmall"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="@dimen/dp_8"-->
+    <!--        android:layout_marginEnd="@dimen/dp_20"-->
+    <!--        android:gravity="start"-->
+    <!--        android:text="24-Nov-22 41300 CE"-->
+    <!--        android:textColor="@color/body_grey"-->
+    <!--        app:layout_constraintEnd_toStartOf="@+id/tvScriptPerChange1"-->
+    <!--        app:layout_constraintHorizontal_bias="1"-->
+    <!--        app:layout_constraintStart_toStartOf="0"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/tvScriptTitle1" />-->
+
+    <!--    <androidx.appcompat.widget.AppCompatTextView-->
+    <!--        android:id="@+id/tvScriptPrice1"-->
+    <!--        style="@style/barlowMediumLarge"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:drawableEnd="@drawable/ic_arrow_drop_up"-->
+    <!--        android:gravity="end"-->
+    <!--        android:text="245.04"-->
+    <!--        android:textColor="@color/buy_green"-->
+    <!--        app:layout_constraintHorizontal_bias="1"-->
+    <!--        app:layout_constraintRight_toRightOf="0"-->
+    <!--        app:layout_constraintTop_toTopOf="0" />-->
+
+    <!--    <androidx.appcompat.widget.AppCompatTextView-->
+    <!--        android:id="@+id/tvScriptPerChange1"-->
+    <!--        style="@style/barlowMediumSmall"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="@dimen/dp_8"-->
+    <!--        android:gravity="end"-->
+    <!--        android:text="+3.10 (+1.28%)"-->
+    <!--        android:textColor="@color/body_grey"-->
+    <!--        app:layout_constraintEnd_toEndOf="0"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/tvScriptTitle1" />-->
+
+    <!--    <View-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="1dp"-->
+    <!--        android:layout_marginTop="@dimen/dp_12"-->
+    <!--        android:background="@color/line_grey"-->
+    <!--        app:layout_constraintEnd_toEndOf="0"-->
+    <!--        app:layout_constraintStart_toStartOf="0"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/tvScriptSubTitle1" />-->
+    <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <!--<androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--    android:id="@+id/cldummyWatchlistItem2"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:background="@color/white_color"-->
+    <!--    android:paddingLeft="@dimen/dp_12"-->
+    <!--    android:paddingTop="@dimen/dp_12"-->
+    <!--    android:paddingRight="@dimen/dp_12">-->
+
+    <!--    <androidx.appcompat.widget.AppCompatTextView-->
+    <!--        android:id="@+id/tvScriptTitle2"-->
+    <!--        style="@style/barlowMediumLarge"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:gravity="start"-->
+    <!--        android:maxLines="2"-->
+    <!--        android:text="BankNifty"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/tvScriptSubTitle2"-->
+    <!--        app:layout_constraintLeft_toLeftOf="0"-->
+    <!--        app:layout_constraintTop_toTopOf="0" />-->
+
+    <!--    <androidx.appcompat.widget.AppCompatTextView-->
+    <!--        android:id="@+id/tvScriptSegment2"-->
+    <!--        style="@style/segmentContainer"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:background="@drawable/atm_tag_bg"-->
+    <!--        android:text="@string/atm"-->
+    <!--        android:textColor="@color/title_black"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/tvScriptTitle2"-->
+    <!--        app:layout_constraintLeft_toRightOf="@+id/tvScriptTitle2"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/tvScriptTitle2" />-->
+
+    <!--    <androidx.appcompat.widget.AppCompatTextView-->
+    <!--        android:id="@+id/tvScriptSubTitle2"-->
+    <!--        style="@style/barlowRegularSmall"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="@dimen/dp_8"-->
+    <!--        android:gravity="start"-->
+    <!--        android:text="24-Nov-22 41350 CE"-->
+    <!--        android:textColor="@color/body_grey"-->
+    <!--        app:layout_constraintEnd_toStartOf="@+id/tvScriptPerChange2"-->
+    <!--        app:layout_constraintHorizontal_bias="1"-->
+    <!--        app:layout_constraintStart_toStartOf="0"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/tvScriptTitle2" />-->
+
+    <!--    <androidx.appcompat.widget.AppCompatTextView-->
+    <!--        android:id="@+id/tvScriptPrice2"-->
+    <!--        style="@style/barlowMediumLarge"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:drawableEnd="@drawable/ic_arrow_drop_up"-->
+    <!--        android:gravity="end"-->
+    <!--        android:text="62.70"-->
+    <!--        android:textColor="@color/buy_green"-->
+    <!--        app:layout_constraintHorizontal_bias="1"-->
+    <!--        app:layout_constraintRight_toRightOf="0"-->
+    <!--        app:layout_constraintTop_toTopOf="0" />-->
+
+    <!--    <androidx.appcompat.widget.AppCompatTextView-->
+    <!--        android:id="@+id/tvScriptPerChange2"-->
+    <!--        style="@style/barlowMediumSmall"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="@dimen/dp_8"-->
+    <!--        android:gravity="end"-->
+    <!--        android:text="+2.55 (+4.24%)"-->
+    <!--        android:textColor="@color/body_grey"-->
+    <!--        app:layout_constraintEnd_toEndOf="0"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/tvScriptTitle2" />-->
+
+    <!--    <View-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="1dp"-->
+    <!--        android:layout_marginTop="@dimen/dp_12"-->
+    <!--        android:background="@color/line_grey"-->
+    <!--        app:layout_constraintEnd_toEndOf="0"-->
+    <!--        app:layout_constraintStart_toStartOf="0"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/tvScriptSubTitle2" />-->
+    <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <!--<androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--    android:id="@+id/cldummyWatchlistItem3"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:background="@color/white_color"-->
+    <!--    android:paddingLeft="@dimen/dp_12"-->
+    <!--    android:paddingTop="@dimen/dp_12"-->
+    <!--    android:paddingRight="@dimen/dp_12">-->
+
+    <!--    <androidx.appcompat.widget.AppCompatTextView-->
+    <!--        android:id="@+id/tvScriptTitle3"-->
+    <!--        style="@style/barlowMediumLarge"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:gravity="start"-->
+    <!--        android:maxLines="2"-->
+    <!--        android:text="BankNifty"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/tvScriptSubTitle3"-->
+    <!--        app:layout_constraintLeft_toLeftOf="0"-->
+    <!--        app:layout_constraintTop_toTopOf="0" />-->
+
+    <!--    <androidx.appcompat.widget.AppCompatTextView-->
+    <!--        android:id="@+id/tvScriptSegment3"-->
+    <!--        style="@style/segmentContainer"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:background="@drawable/otm_tag_bg"-->
+    <!--        android:text="@string/otm"-->
+    <!--        android:textColor="@color/title_black"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/tvScriptTitle3"-->
+    <!--        app:layout_constraintLeft_toRightOf="@+id/tvScriptTitle3"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/tvScriptTitle3" />-->
+
+    <!--    <androidx.appcompat.widget.AppCompatTextView-->
+    <!--        android:id="@+id/tvScriptSubTitle3"-->
+    <!--        style="@style/barlowRegularSmall"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="@dimen/dp_8"-->
+    <!--        android:gravity="start"-->
+    <!--        android:text="24-Nov-22 41400 CE"-->
+    <!--        android:textColor="@color/body_grey"-->
+    <!--        app:layout_constraintEnd_toStartOf="@+id/tvScriptPerChange3"-->
+    <!--        app:layout_constraintHorizontal_bias="1"-->
+    <!--        app:layout_constraintStart_toStartOf="0"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/tvScriptTitle3" />-->
+
+    <!--    <androidx.appcompat.widget.AppCompatTextView-->
+    <!--        android:id="@+id/tvScriptPrice3"-->
+    <!--        style="@style/barlowMediumLarge"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:drawableEnd="@drawable/ic_arrow_drop_down"-->
+    <!--        android:gravity="end"-->
+    <!--        android:text="829.20"-->
+    <!--        android:textColor="@color/sell_red"-->
+    <!--        app:layout_constraintHorizontal_bias="1"-->
+    <!--        app:layout_constraintRight_toRightOf="0"-->
+    <!--        app:layout_constraintTop_toTopOf="0" />-->
+
+    <!--    <androidx.appcompat.widget.AppCompatTextView-->
+    <!--        android:id="@+id/tvScriptPerChange3"-->
+    <!--        style="@style/barlowMediumSmall"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="@dimen/dp_8"-->
+    <!--        android:gravity="end"-->
+    <!--        android:text="-8.85 (-1.06%)"-->
+    <!--        android:textColor="@color/body_grey"-->
+    <!--        app:layout_constraintEnd_toEndOf="0"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/tvScriptTitle3" />-->
+
+    <!--    <View-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="1dp"-->
+    <!--        android:layout_marginTop="@dimen/dp_12"-->
+    <!--        android:background="@color/line_grey"-->
+    <!--        app:layout_constraintEnd_toEndOf="0"-->
+    <!--        app:layout_constraintStart_toStartOf="0"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/tvScriptSubTitle3" />-->
+    <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <!--</LinearLayout>-->

@@ -1,0 +1,787 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/clMainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_grey">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="false"
+        app:layout_constraintBottom_toBottomOf="@+id/clMainLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/MainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background_grey">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_8"
+                app:cornerRadius="@dimen/dp_0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/background_grey">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTitle"
+                        style="@style/barlowMedium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/your_account"
+                        android:textSize="@dimen/sp_24"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/ivRefer"
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="@dimen/dp_36"
+                        android:layout_marginTop="@dimen/dp_17"
+                        android:layout_marginEnd="@dimen/dp_8"
+                        android:background="@drawable/bg_grey_stroke_12dp_corner"
+                        app:layout_constraintEnd_toStartOf="@+id/imgProfilePlaceHolder"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/refer_earn_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_16"
+                            android:layout_marginTop="@dimen/dp_9"
+                            android:layout_marginEnd="@dimen/dp_8"
+                            android:layout_marginBottom="@dimen/dp_10"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_refer_earn_gift" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/refer_earn_text"
+                            style="@style/barlowSemiBoldSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_9"
+                            android:layout_marginEnd="@dimen/dp_12"
+                            android:layout_marginBottom="@dimen/dp_9"
+                            android:gravity="center"
+                            android:text="@string/refer_earn"
+                            android:textColor="@color/primary_blue"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/refer_earn_img"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgProfilePlaceHolder"
+                        android:layout_width="@dimen/dp_36"
+                        android:layout_height="@dimen/dp_36"
+                        android:layout_margin="@dimen/dp_16"
+                        android:elevation="@dimen/dp_2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/drawable_profile_placeholder" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvAccountProfile"
+                        style="@style/barlowSemiBold"
+                        android:layout_width="@dimen/dp_26"
+                        android:layout_height="@dimen/dp_26"
+                        android:layout_marginTop="@dimen/dp_21"
+                        android:layout_marginEnd="@dimen/dp_21"
+                        android:elevation="@dimen/dp_4"
+                        android:gravity="center"
+                        android:text="AH"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/bg_profile_round_blue" />
+
+                    <ImageView
+                        android:id="@+id/imgProfile"
+                        android:layout_width="@dimen/dp_26"
+                        android:layout_height="@dimen/dp_26"
+                        android:layout_marginTop="@dimen/dp_21"
+                        android:layout_marginEnd="@dimen/dp_21"
+                        android:elevation="@dimen/dp_2"
+                        android:tag="binding_1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/tradingCardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_8"
+                        android:layout_marginTop="@dimen/dp_18"
+                        android:layout_marginRight="@dimen/dp_8"
+                        android:layout_marginBottom="@dimen/dp_8"
+                        app:cornerRadius="@dimen/dp_8"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvTitle">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/clFunds"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/dp_16"
+                            android:paddingTop="@dimen/dp_16"
+                            android:paddingEnd="@dimen/dp_16"
+                            android:paddingBottom="@dimen/dp_16">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tradingBalanceTxt"
+                                style="@style/barlowMedium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/trading_balance"
+                                android:textColor="@color/body_grey"
+                                android:textSize="@dimen/sp_13_5"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/txt_rupee"
+                                style="@style/barlowRegularSmall"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_4"
+                                android:text="@string/rupee_symbol"
+                                android:textColor="@color/title_black"
+                                app:layout_constraintStart_toStartOf="@+id/tradingBalanceTxt"
+                                app:layout_constraintTop_toBottomOf="@+id/tradingBalanceTxt" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtAvailableMargin"
+                                style="@style/barlowMedium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp_2"
+                                android:includeFontPadding="false"
+                                android:text="@string/default_amount"
+                                android:textColor="@color/title_black"
+                                android:textSize="@dimen/sp_26"
+                                app:layout_constraintStart_toEndOf="@+id/txt_rupee"
+                                app:layout_constraintTop_toBottomOf="@+id/tradingBalanceTxt" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/img_arrow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_8"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/ic_arrow_right_blue" />
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/llAddFundWithdrawBtns"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingTop="@dimen/dp_16"
+                                android:weightSum="1"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="@+id/txt_rupee"
+                                app:layout_constraintTop_toBottomOf="@+id/txtAvailableMargin">
+
+                                <com.google.android.material.button.MaterialButton
+                                    android:id="@+id/clWithdraw"
+                                    style="?android:attr/borderlessButtonStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/dp_4"
+                                    android:layout_weight="0.5"
+                                    android:background="@drawable/bg_border_button_no_fill_clr"
+                                    android:fontFamily="@font/app_font_medium"
+                                    android:tag="binding_2"
+                                    android:text="@string/withdraw"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/primary_blue"
+                                    android:textSize="@dimen/sp_14" />
+
+                                <com.google.android.material.button.MaterialButton
+                                    android:id="@+id/clAddFund"
+                                    style="@style/barlowSemiBoldMedium"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/dp_4"
+                                    android:layout_weight="0.5"
+                                    android:background="@drawable/shape_cta"
+                                    android:tag="binding_3"
+                                    android:text="@string/add_fund_txt"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/white" />
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clSupport"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_74"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toStartOf="@+id/tradingCardView"
+                        app:layout_constraintHorizontal_chainStyle="spread_inside"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tradingCardView">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/barlowMediumSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableTop="@drawable/ic_suport"
+                            android:drawablePadding="@dimen/dp_4"
+                            android:gravity="center_horizontal"
+                            android:text="@string/support"
+                            android:textAllCaps="true"
+                            android:textStyle="normal"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/dp_20"
+                            android:layout_marginBottom="@dimen/dp_20"
+                            android:background="@color/line_grey"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/funds_txn_details"
+                        style="@style/barlowSemiBoldMedium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/dp_10"
+                        android:paddingTop="@dimen/dp_24"
+                        android:paddingBottom="@dimen/dp_24"
+                        android:text="@string/view_funds_transaction_details"
+                        android:textAllCaps="true"
+                        android:textColor="@color/primary_blue"
+                        android:visibility="gone"
+                        app:drawableEndCompat="@drawable/ic_arrow_right_rounded"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tradingCardView" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <FrameLayout
+                android:id="@+id/nudge_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="@dimen/dp_4"
+                android:layout_marginRight="6dp"
+                android:layout_marginBottom="@dimen/dp_4"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView01" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cardView03"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_4"
+                android:paddingLeft="@dimen/dp_8"
+                android:paddingRight="@dimen/dp_8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nudge_layout">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/stockPledgingLL"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_6"
+                    android:background="@drawable/bg_white_8dp"
+                    android:padding="@dimen/dp_16"
+                    app:layout_constraintEnd_toStartOf="@+id/mtfLayout"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_stockPledging"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_16"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_stock_pledging" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/stockPledging_title"
+                        style="@style/barlowMediumLarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_12"
+                        android:text="@string/stock_pledge_title"
+                        android:textColor="@color/title_black"
+                        app:layout_constraintStart_toStartOf="@+id/iv_stockPledging"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_stockPledging" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/stockPledging_description"
+                        style="@style/barlowRegularSmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:text="@string/stock_pledge_description_profile"
+                        android:textColor="@color/body_grey"
+                        app:layout_constraintStart_toStartOf="@+id/stockPledging_title"
+                        app:layout_constraintTop_toBottomOf="@+id/stockPledging_title"
+                        app:lineHeight="@dimen/dp_16" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/pledge_stock_txt"
+                        style="@style/barlowSemiBoldMedium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_24"
+                        android:layout_marginEnd="@dimen/dp_8"
+                        android:text="@string/stock_pledge_button_text"
+                        android:textAllCaps="true"
+                        android:textColor="@color/primary_blue"
+                        app:layout_constraintStart_toStartOf="@+id/stockPledging_description"
+                        app:layout_constraintTop_toBottomOf="@+id/stockPledging_description" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/pledge_arrow"
+                        android:layout_width="@dimen/dp_25"
+                        android:layout_height="@dimen/dp_25"
+                        app:layout_constraintBottom_toBottomOf="@+id/pledge_stock_txt"
+                        app:layout_constraintLeft_toRightOf="@+id/pledge_stock_txt"
+                        app:layout_constraintTop_toTopOf="@+id/pledge_stock_txt"
+                        app:srcCompat="@drawable/ic_arrow_right_blue" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/mtfLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_6"
+                    android:background="@drawable/bg_white_8dp"
+                    android:padding="@dimen/dp_16"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/stockPledgingLL"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_mtf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_16"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_pay_later_new" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/mtf_title"
+                        style="@style/barlowMediumLarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_12"
+                        android:text="@string/pay_later_text"
+                        android:textColor="@color/title_black"
+                        app:layout_constraintStart_toStartOf="@+id/iv_mtf"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_mtf" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/mtf_description"
+                        style="@style/barlowRegularSmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:text="@string/pay_later_description_profile"
+                        android:textColor="@color/body_grey"
+                        app:layout_constraintStart_toStartOf="@+id/mtf_title"
+                        app:layout_constraintTop_toBottomOf="@+id/mtf_title"
+                        app:lineHeight="@dimen/dp_16" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/mtf_viewdetails_txt"
+                        style="@style/barlowSemiBoldMedium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_24"
+                        android:layout_marginEnd="@dimen/dp_8"
+                        android:text="@string/view_details_text"
+                        android:textAllCaps="true"
+                        android:textColor="@color/primary_blue"
+                        app:layout_constraintStart_toStartOf="@+id/mtf_description"
+                        app:layout_constraintTop_toBottomOf="@+id/mtf_description" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/mtf_details_arrow"
+                        android:layout_width="@dimen/dp_25"
+                        android:layout_height="@dimen/dp_25"
+                        app:layout_constraintBottom_toBottomOf="@+id/mtf_viewdetails_txt"
+                        app:layout_constraintLeft_toRightOf="@+id/mtf_viewdetails_txt"
+                        app:layout_constraintTop_toTopOf="@+id/mtf_viewdetails_txt"
+                        app:srcCompat="@drawable/ic_arrow_right_blue" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView04"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_4"
+                app:cornerRadius="@dimen/dp_0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView03">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout02"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="@dimen/dp_16"
+                    android:paddingTop="@dimen/dp_16"
+                    android:paddingRight="@dimen/dp_16"
+                    android:paddingBottom="@dimen/dp_8">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/post_trade_title"
+                        style="@style/barlowSemiBoldLarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:letterSpacing="0.07"
+                        android:text="@string/post_trade_title"
+                        android:textAllCaps="true"
+                        android:textColor="@color/primary_blue"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/post_trade_sub_title"
+                        style="@style/barlowSemiBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:background="@drawable/segment_background"
+                        android:paddingLeft="4dp"
+                        android:paddingTop="1dp"
+                        android:paddingRight="4dp"
+                        android:paddingBottom="1dp"
+                        android:text="@string/post_trade_sub_title"
+                        android:textColor="@color/body_grey"
+                        android:textSize="@dimen/sp_11"
+                        app:layout_constraintBottom_toBottomOf="@+id/post_trade_title"
+                        app:layout_constraintStart_toEndOf="@+id/post_trade_title"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/post_trade_description"
+                        style="@style/barlowRegularSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:text="@string/post_trade_description"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/post_trade_title" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/tradesChargesLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:paddingTop="@dimen/dp_12"
+                        android:paddingBottom="@dimen/dp_12"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/post_trade_description">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_trades"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_trades_charges" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_trades_title"
+                            style="@style/barlowMedium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_16"
+                            android:text="@string/trades_charges_title"
+                            app:layout_constraintLeft_toRightOf="@+id/iv_trades"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_trades_detail"
+                            style="@style/barlowRegularSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_16"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:layout_marginBottom="@dimen/dp_20"
+                            android:letterSpacing="-0.02"
+                            android:text="@string/trades_charges_description"
+                            android:textColor="@color/body_grey"
+                            app:layout_constraintLeft_toRightOf="@+id/iv_trades"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_trades_title" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_trades_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/dp_9"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/icon_next" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/profitLossLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:paddingTop="@dimen/dp_12"
+                        android:paddingBottom="@dimen/dp_12"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tradesChargesLayout">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_profitLoss"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_profit_loss" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_profitLoss_title"
+                            style="@style/barlowMedium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_16"
+                            android:text="@string/profit_loss_title"
+                            app:layout_constraintLeft_toRightOf="@+id/iv_profitLoss"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_profitLoss_detail"
+                            style="@style/barlowRegularSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_16"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:layout_marginBottom="@dimen/dp_20"
+                            android:letterSpacing="-0.02"
+                            android:text="@string/profit_loss_description"
+                            android:textColor="@color/body_grey"
+                            app:layout_constraintLeft_toRightOf="@+id/iv_profitLoss"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_profitLoss_title" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_profitLoss_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/dp_9"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/icon_next" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/statementLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:paddingTop="@dimen/dp_12"
+                        android:paddingBottom="@dimen/dp_12"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/profitLossLayout">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_statement"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_statement" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_statement_title"
+                            style="@style/barlowMedium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_16"
+                            android:text="@string/statement_title"
+                            app:layout_constraintLeft_toRightOf="@+id/iv_statement"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_statement_detail"
+                            style="@style/barlowRegularSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_16"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:layout_marginBottom="@dimen/dp_20"
+                            android:letterSpacing="-0.02"
+                            android:text="@string/statement_description"
+                            android:textColor="@color/body_grey"
+                            app:layout_constraintLeft_toRightOf="@+id/iv_statement"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_statement_title" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_statement_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/dp_9"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/icon_next" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/reportLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:padding="@dimen/dp_8"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/statementLayout">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_reports"
+                            style="@style/barlowSemiBoldMedium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            android:text="@string/all_reports"
+                            android:textAllCaps="true"
+                            android:textColor="@color/primary_blue"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/iv_reports"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_reports"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:tint="@color/primary_blue"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_arrow_right_rounded" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/fundsTransactionLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:paddingTop="@dimen/dp_12"
+                        android:paddingBottom="@dimen/dp_12"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/reportLayout">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_funds_transaction"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_fund_transaction" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_fund_transaction_title"
+                            style="@style/barlowMedium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_16"
+                            android:text="@string/fund_transactions"
+                            app:layout_constraintLeft_toRightOf="@+id/iv_funds_transaction"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_transaction_detail"
+                            style="@style/barlowRegularSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_16"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:layout_marginBottom="@dimen/dp_20"
+                            android:letterSpacing="-0.02"
+                            android:text="@string/add_withdraws_funds_history"
+                            android:textColor="@color/body_grey"
+                            app:layout_constraintLeft_toRightOf="@+id/iv_funds_transaction"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_fund_transaction_title" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_transaction_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/dp_9"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/icon_next" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAppVersion"
+                style="@style/barlowRegularMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_30"
+                android:layout_marginBottom="@dimen/dp_32"
+                android:textAlignment="center"
+                android:textColor="@color/body_grey"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

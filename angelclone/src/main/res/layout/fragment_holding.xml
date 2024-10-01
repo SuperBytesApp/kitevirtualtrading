@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_grey">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_50"
+                android:layout_margin="10dp"
+                android:background="@drawable/bg_filter_enable_disable"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/ic_search_grey"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/bg_grey_filter"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_10"
+                        android:text="Search for a company or a stock"
+                        android:textColor="@color/body_grey"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageView2"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView9">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_portfolio_gl_card_bg" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_market_val_rupee"
+            style="@style/barlowSemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_14"
+            android:layout_marginTop="@dimen/dp_17"
+            android:text="₹23,45,678"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_market_value"
+            style="@style/barlowSemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_1"
+            android:layout_marginTop="@dimen/dp_17"
+            android:tag="binding_1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18"
+            app:layout_constraintStart_toEndOf="@+id/tv_market_val_rupee"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/show_hide_values_cta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_6"
+            android:src="@drawable/ic_eye_icon"
+            android:tag="binding_2"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_market_value"
+            app:layout_constraintStart_toEndOf="@+id/tv_market_value"
+            app:layout_constraintTop_toTopOf="@+id/tv_market_value"
+            app:tint="#B2B2B2" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_over_all_gl_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_2"
+            android:src="@drawable/ic_market_value_gain_arrow"
+            android:tag="binding_3"
+            app:layout_constraintStart_toStartOf="@+id/tv_market_val_rupee"
+            app:layout_constraintTop_toBottomOf="@+id/tv_market_value" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_over_all_gl_title"
+            style="@style/barlowRegularSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_2"
+            android:tag="binding_4"
+            android:text="Ovrall Gain"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/iv_over_all_gl_arrow"
+            app:layout_constraintTop_toTopOf="@+id/iv_over_all_gl_arrow" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_over_all_gl_amt"
+            style="@style/barlowMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_4"
+            android:tag="binding_5"
+            android:text="₹23,45,678"
+            android:textColor="@color/buy_green1"
+            app:layout_constraintStart_toEndOf="@+id/tv_over_all_gl_title"
+            app:layout_constraintTop_toTopOf="@+id/iv_over_all_gl_arrow" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_over_all_gl_percentage"
+            style="@style/barlowMediumSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_4"
+            android:tag="binding_6"
+            android:text="(+17.28%)"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/tv_over_all_gl_amt"
+            app:layout_constraintTop_toTopOf="@+id/iv_over_all_gl_arrow" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_invested_title"
+            style="@style/barlowRegularSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_17"
+            android:text="@string/txt_invested_value"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@+id/tv_market_val_rupee"
+            app:layout_constraintTop_toBottomOf="@+id/tv_over_all_gl_amt" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_invested_rupee"
+            style="@style/barlowMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_2"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@+id/tv_market_val_rupee"
+            app:layout_constraintTop_toBottomOf="@+id/tv_invested_title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_invested_amt"
+            style="@style/barlowMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_1"
+            android:tag="binding_7"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/tv_invested_rupee"
+            app:layout_constraintTop_toTopOf="@+id/tv_invested_rupee" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_today_gl_title"
+            style="@style/barlowRegularSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_12"
+            android:tag="binding_8"
+            android:text="Today's Loss"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_invested_title" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/appCompatImageView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_17"
+            android:layout_marginEnd="@dimen/dp_2"
+            android:src="@drawable/ic_market_value_loss_arrow"
+            android:tag="binding_9"
+            app:layout_constraintEnd_toStartOf="@+id/tv_today_gl_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_over_all_gl_amt" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_today_gl_percentage"
+            style="@style/barlowMediumSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="binding_10"
+            android:text="(-6.54%)"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_today_gl_amt"
+            app:layout_constraintEnd_toEndOf="@+id/tv_today_gl_title"
+            app:layout_constraintTop_toTopOf="@+id/tv_today_gl_amt" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_today_gl_amt"
+            style="@style/barlowMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_5"
+            android:tag="binding_11"
+            android:text="-₹23,45,678"
+            android:textColor="@color/light_sell_red"
+            app:layout_constraintEnd_toStartOf="@+id/tv_today_gl_percentage"
+            app:layout_constraintTop_toTopOf="@+id/tv_invested_amt" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/space_invested_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_invested_amt" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_footer_bg"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            android:tag="binding_12"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/space_invested_bottom"
+            app:srcCompat="@drawable/ic_portfolio_gl_card_footer_bg" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_authorize"
+            style="@style/barlowMediumSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:paddingTop="@dimen/dp_9"
+            android:paddingBottom="@dimen/dp_12"
+            android:tag="binding_13"
+            android:text="VERIFY TO SELL"
+            android:textColor="#21c7db"
+            app:drawableEndCompat="@drawable/ic_lock"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/space_invested_bottom" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_analyze_portfolio"
+            style="@style/barlowMediumSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_15"
+            android:drawablePadding="@dimen/dp_4"
+            android:paddingTop="@dimen/dp_9"
+            android:paddingBottom="@dimen/dp_12"
+            android:tag="binding_14"
+            android:text="@string/btn_portfolio_Analyze"
+            android:textColor="#21c7db"
+            app:drawableStartCompat="@drawable/ic_analyze"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/space_invested_bottom"
+            app:textAllCaps="true" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

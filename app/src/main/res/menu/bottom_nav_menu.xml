@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/bookmark"
+        android:title="Watchlist" />
+
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:icon="@drawable/book"
+        android:iconTint="@color/black"
+        android:title="Orders" />
+
+    <item
+        android:id="@+id/navigation_notifications"
+        android:icon="@drawable/briefcase"
+        android:title="Portfolio" />
+
+    <item
+        android:id="@+id/navigation_tool"
+        android:icon="@drawable/wrench"
+        android:title="Tools" />
+
+    <item
+    android:id="@+id/navigation_user"
+        android:icon="@drawable/user"
+        android:title="09XDGSY" />
+
+
+</menu>

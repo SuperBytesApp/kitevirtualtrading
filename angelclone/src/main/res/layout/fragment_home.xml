@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/background_grey"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/angelnavback"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!--    <androidx.appcompat.widget.AppCompatImageView-->
+<!--        android:id="@+id/imgProfilePlaceHolder"-->
+<!--        android:layout_width="@dimen/dp_56"-->
+<!--        android:layout_height="@dimen/dp_56"-->
+<!--        android:layout_margin="@dimen/dp_10"-->
+<!--        android:elevation="@dimen/dp_2"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:srcCompat="@drawable/drawable_profile_placeholder" />-->
+
+<!--    <androidx.appcompat.widget.AppCompatTextView-->
+<!--        android:id="@+id/tvAccountProfile"-->
+<!--        style="@style/barlowSemiBold"-->
+<!--        android:layout_width="@dimen/dp_26"-->
+<!--        android:layout_height="@dimen/dp_26"-->
+<!--        android:elevation="@dimen/dp_4"-->
+<!--        android:gravity="center"-->
+<!--        android:text="TR"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textAllCaps="true"-->
+<!--        android:textColor="#FFFFFF"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/imgProfilePlaceHolder"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/imgProfilePlaceHolder"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/imgProfilePlaceHolder"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/imgProfilePlaceHolder"-->
+<!--        app:srcCompat="@drawable/bg_profile_round_blue" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imgProfile"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:elevation="@dimen/dp_2"-->
+<!--        android:layout_margin="@dimen/dp_8"-->
+<!--        android:tag="binding_1"-->
+<!--        android:src="@drawable/bg_blue_round"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/imgProfilePlaceHolder"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/imgProfilePlaceHolder"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/imgProfilePlaceHolder"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/imgProfilePlaceHolder" />-->
+
+
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:id="@+id/cardView2"-->
+<!--        android:layout_width="@dimen/dp_16"-->
+<!--        android:layout_height="@dimen/dp_16"-->
+<!--        app:cardBackgroundColor="#FFFFFF"-->
+<!--        app:cardCornerRadius="100dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/imgProfile"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/imgProfile"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/tvAccountProfile"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tvAccountProfile"-->
+<!--        app:srcCompat="@drawable/drawable_profile_placeholder">-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="3dp"-->
+<!--            android:src="@drawable/baseline_dehaze_24" />-->
+
+
+<!--    </androidx.cardview.widget.CardView>-->
+
+
+<!--    <include-->
+<!--        android:id="@+id/includeSearchButton"-->
+<!--        layout="@layout/search_toolbar_button"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="@dimen/dp_10"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/imgProfilePlaceHolder"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/cardView3"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/imgProfilePlaceHolder"-->
+<!--        app:layout_goneMarginEnd="@dimen/dp_20" />-->
+
+
+
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:id="@+id/cardView3"-->
+<!--        android:layout_width="37dp"-->
+<!--        android:layout_height="37dp"-->
+<!--        android:layout_marginEnd="10dp"-->
+<!--        android:foregroundGravity="center"-->
+<!--        app:cardBackgroundColor="#FFFFFF"-->
+<!--        app:cardCornerRadius="@dimen/dp_100"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/imgProfilePlaceHolder"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/imgProfilePlaceHolder">-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_margin="8dp"-->
+<!--            android:src="@drawable/ic_notification_center" />-->
+
+
+<!--    </androidx.cardview.widget.CardView>-->
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView8">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:fontFamily="@font/inter_medium"
+                android:text="Market Today"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/clMarketIndices"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:drawableRight="@drawable/ic_arrow_right_rounded"
+                android:fontFamily="@font/inter_medium"
+                android:text="VIEW MORE"
+                android:textColor="@color/primary_blue"
+                android:textSize="@dimen/dp_12"
+                app:layout_constraintEnd_toEndOf="@+id/clMarketIndices"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clMarketIndices"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_12"
+                android:background="@drawable/bg_explore_static_stock_done"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clMarketView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0">
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="@dimen/dp_1"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="@dimen/dp_12"
+                        android:layout_marginBottom="@dimen/dp_12"
+                        android:background="@color/line_grey"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/ivChooseMarket"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clFirstPosIndices"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/view3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvFirstPosTitle"
+                            style="@style/barlowSemiBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_12"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:text="NIFTY"
+                            android:textColor="@color/body_grey"
+                            android:textSize="@dimen/sp_12"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvFirstPosPriceChange"
+                            style="@style/barlowMedium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_4"
+                            android:drawableRight="@drawable/ic_arrow_gain"
+                            android:drawablePadding="@dimen/dp_2"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/buy_green"
+                            app:layout_constraintStart_toStartOf="@+id/tvFirstPosTitle"
+                            app:layout_constraintTop_toBottomOf="@+id/tvFirstPosTitle" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvFirstPosPercentageChange"
+                            style="@style/barlowMediumSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_4"
+                            android:layout_marginBottom="@dimen/dp_12"
+                            android:textColor="@color/body_grey"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/tvFirstPosPriceChange"
+                            app:layout_constraintTop_toBottomOf="@+id/tvFirstPosPriceChange" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clSecondPosIndices"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/ivChooseMarket"
+                        app:layout_constraintStart_toEndOf="@+id/view3"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvSecondPosTitle"
+                            style="@style/barlowSemiBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_8"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:text="BANKNIFTY"
+                            android:textColor="@color/body_grey"
+                            android:textSize="@dimen/sp_12"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvSecondPosPriceChange"
+                            style="@style/barlowMedium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_8"
+                            android:layout_marginTop="@dimen/dp_4"
+                            android:drawableRight="@drawable/ic_arrow_gain"
+                            android:drawablePadding="@dimen/dp_2"
+                            android:textColor="@color/buy_green"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tvSecondPosTitle" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvSecondPosPercentageChange"
+                            style="@style/barlowMediumSmall"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_4"
+                            android:layout_marginBottom="@dimen/dp_12"
+                            android:textColor="@color/body_grey"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/tvSecondPosPriceChange"
+                            app:layout_constraintTop_toBottomOf="@+id/tvSecondPosPriceChange" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivChooseMarket"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/dp_8"
+                        android:paddingTop="@dimen/dp_12"
+                        android:paddingEnd="@dimen/dp_12"
+                        android:paddingBottom="@dimen/dp_5"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_down_arrow_grey" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="10dp"-->
+<!--        app:cardCornerRadius="8dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/cardView4">-->
+
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
+
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:id="@+id/cardView5"-->
+<!--                android:layout_width="40dp"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                app:cardCornerRadius="@dimen/dp_100"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent">-->
+
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="60dp"-->
+<!--                        android:layout_height="65dp"-->
+<!--                        android:src="@drawable/bond"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+
+
+<!--            </androidx.cardview.widget.CardView>-->
+
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:id="@+id/cardView6"-->
+<!--                android:layout_width="40dp"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginEnd="@dimen/dp_20"-->
+<!--                app:cardCornerRadius="@dimen/dp_100"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent">-->
+
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="60dp"-->
+<!--                        android:layout_height="65dp"-->
+<!--                        android:src="@drawable/ic_icn_holding_sgb"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+<!--            </androidx.cardview.widget.CardView>-->
+
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:id="@+id/cardView7"-->
+<!--                android:layout_width="40dp"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:layout_marginLeft="20dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                app:cardBackgroundColor="#92A6FF"-->
+<!--                app:cardCornerRadius="@dimen/dp_100"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent">-->
+
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:src="@drawable/ic_trade_ipo"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+<!--            </androidx.cardview.widget.CardView>-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/textView6"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginBottom="@dimen/dp_5"-->
+<!--                android:fontFamily="@font/inter_regular"-->
+<!--                android:text="Mutual Funds"-->
+<!--                android:textColor="#3E3E3E"-->
+<!--                android:textSize="11dp"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="@+id/cardView5"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/cardView5"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/cardView5" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginBottom="@dimen/dp_5"-->
+<!--                android:fontFamily="@font/inter_regular"-->
+<!--                android:text="Gold Bonds"-->
+<!--                android:textColor="#3E3E3E"-->
+<!--                android:textSize="11dp"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="@+id/cardView6"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/cardView6"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/cardView5" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginBottom="@dimen/dp_5"-->
+<!--                android:fontFamily="@font/inter_regular"-->
+<!--                android:text="IPO"-->
+<!--                android:textColor="#3E3E3E"-->
+<!--                android:textSize="11dp"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="@+id/cardView7"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/cardView7"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/cardView5" />-->
+
+
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+<!--    </androidx.cardview.widget.CardView>-->
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView8"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_margin="@dimen/dp_10"
+        app:cardCornerRadius="@dimen/dp_10"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        tools:layout_editor_absoluteX="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_profile_bg_pattern"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:fontFamily="@font/inter_semi_bold"
+                android:text="Explore Angel One"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toTopOf="@+id/textView8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:fontFamily="@font/inter_regular"
+                android:text="Learn more about our all-in-one\ninvesting and trading app"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/dp_12"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/homeback"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView4" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

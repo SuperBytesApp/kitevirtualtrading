@@ -1,0 +1,17 @@
+<!-- rounded_corner_with_white_border.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background with rounded corners -->
+    <item>
+        <shape android:shape="rectangle">
+             <corners android:radius="20dp" /> <!-- CardView corner radius -->
+        </shape>
+    </item>
+    <!-- White border with 2dp corner radius -->
+    <item android:right="2dp" android:left="2dp" android:top="2dp" android:bottom="2dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" /> <!-- Transparent background -->
+            <stroke android:color="@color/paletteGrey5Alt" android:width="0.2dp" /> <!-- White border with 2dp width -->
+            <corners android:radius="20dp" /> <!-- Corner radius (matches the CardView) -->
+        </shape>
+    </item>
+</layer-list>

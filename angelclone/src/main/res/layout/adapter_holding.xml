@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardStockInfo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:backgroundColor="@color/card_background_color"
+    android:layout_margin="@dimen/dp_8"
+    app:cardCornerRadius="@dimen/dp_8">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_12"
+        android:paddingRight="@dimen/dp_16"
+        android:paddingBottom="@dimen/dp_12">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvStockEventTitle"
+            style="@style/barlowBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/dp_4"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dp_8"
+            android:tag="binding_1"
+            android:textAllCaps="true"
+            android:textColor="@color/primary_blue"
+            android:textSize="@dimen/sp_9"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvStockSplitTitle"
+            style="@style/barlowBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_8"
+            android:drawablePadding="@dimen/dp_4"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dp_8"
+            android:tag="binding_2"
+            android:textAllCaps="true"
+            android:textColor="@color/primary_blue"
+            android:textSize="@dimen/sp_9"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/tvStockEventTitle"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_stock_name"
+            style="@style/barlowMediumLarge"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:tag="binding_3"
+            android:text="TATA STOCKS"
+            app:layout_constraintEnd_toStartOf="@+id/tv_over_all_gl_amt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvStockEventTitle" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_over_all_gl_percentage"
+            style="@style/barlowRegularSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="binding_4"
+            android:text="(+60.33%)"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_over_all_gl_amt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_over_all_gl_amt" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_over_all_gl_amt"
+            style="@style/barlowMediumLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_4"
+            android:tag="binding_5"
+            android:text="38473"
+            app:layout_constraintEnd_toStartOf="@+id/tv_over_all_gl_percentage"
+            app:layout_constraintTop_toTopOf="@+id/tv_stock_name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_quantity_short"
+            style="@style/barlowMediumSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:text="Avg"
+            android:textColor="@color/body_grey"
+            android:tag="binding_6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_stock_name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_quantity_multiplier_short"
+            style="@style/barlowMediumSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_3"
+            android:paddingEnd="@dimen/dp_4"
+            android:tag="binding_7"
+            android:text="133.41"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_quantity_short"
+            app:layout_constraintStart_toEndOf="@+id/tv_quantity_short" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_avg_title"
+            style="@style/barlowRegularSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:tag="binding_8"
+            android:textColor="@color/light_body_grey"
+            app:layout_constraintStart_toEndOf="@+id/tv_quantity_multiplier_short"
+            app:layout_constraintTop_toBottomOf="@+id/tv_stock_name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_avg_amt"
+            style="@style/barlowMediumSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_4"
+            android:tag="binding_9"
+            app:layout_constraintEnd_toStartOf="@+id/tv_ltp_title"
+            app:layout_constraintStart_toEndOf="@+id/tv_avg_title"
+            app:layout_constraintTop_toTopOf="@+id/tv_avg_title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_ltp"
+            style="@style/barlowMediumSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_4"
+            android:text="213.97"
+            android:tag="binding_10"
+            app:layout_constraintEnd_toStartOf="@+id/tv_price_change_percentage"
+            app:layout_constraintTop_toBottomOf="@+id/tv_over_all_gl_amt" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_price_change_percentage"
+            style="@style/barlowRegularSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="binding_11"
+            android:text="(+210.87%)"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_ltp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_ltp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_ltp_title"
+            style="@style/barlowRegularSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_4"
+            android:text="@string/ltp"
+            android:textColor="@color/light_body_grey"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_ltp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_ltp"
+            app:layout_constraintTop_toTopOf="@+id/tv_ltp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_quantity_long_title"
+            style="@style/barlowRegularSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:tag="binding_12"
+            android:text="Shares"
+            android:textColor="@color/light_body_grey"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_avg_amt" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_quantity_long_value"
+            style="@style/barlowMediumSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_4"
+            android:tag="binding_13"
+            android:text="100"
+            app:layout_constraintStart_toEndOf="@+id/tv_quantity_long_title"
+            app:layout_constraintTop_toTopOf="@+id/tv_quantity_long_title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_today_gl"
+            style="@style/barlowMediumSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_4"
+            android:text="90.98"
+            android:tag="binding_14"
+            app:layout_constraintEnd_toStartOf="@+id/tv_today_gl_percentage"
+            app:layout_constraintTop_toBottomOf="@+id/tv_ltp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_today_gl_percentage"
+            style="@style/barlowRegularSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="binding_15"
+            android:text="(+90.98%)"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_today_gl"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_today_gl" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_today_gl_title"
+            style="@style/barlowRegularSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_4"
+            android:tag="binding_16"
+            android:text="Today's Loss"
+            android:textColor="@color/light_body_grey"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_today_gl"
+            app:layout_constraintEnd_toStartOf="@+id/tv_today_gl"
+            app:layout_constraintTop_toTopOf="@+id/tv_today_gl" />
+
+        <View
+            android:id="@+id/divider_bottom"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_1"
+            android:layout_marginTop="@dimen/dp_8"
+            android:background="@color/light_line_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_today_gl" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_invested_title"
+            style="@style/barlowRegularSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:text="@string/invested"
+            android:textColor="@color/light_body_grey"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider_bottom" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_invested_value"
+            style="@style/barlowMediumSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_4"
+            android:tag="binding_17"
+            android:text="21,09,99"
+            app:layout_constraintStart_toEndOf="@+id/tv_invested_title"
+            app:layout_constraintTop_toTopOf="@+id/tv_invested_title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_current_title"
+            style="@style/barlowRegularSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_4"
+            android:text="@string/current"
+            android:textColor="@color/light_body_grey"
+            app:layout_constraintEnd_toStartOf="@+id/tv_current_value"
+            app:layout_constraintTop_toBottomOf="@+id/divider_bottom" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_current_value"
+            style="@style/barlowMediumSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="binding_18"
+            android:text="21,098.87"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_invested_title" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

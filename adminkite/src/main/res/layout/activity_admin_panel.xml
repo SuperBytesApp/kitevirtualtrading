@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    tools:context=".AdminPanelActivity">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foregroundGravity="center"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/kite"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="Kite"
+            android:foregroundGravity="top"
+            android:gravity="center"
+            android:layout_marginStart="10dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/nameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:paddingStart="10dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:minHeight="56dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_edittext_bg" />
+
+    <EditText
+        android:id="@+id/emailEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:paddingStart="10dp"
+        android:inputType="textEmailAddress"
+        android:fontFamily="sans-serif-smallcaps"
+        android:minHeight="56dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_edittext_bg" />
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:paddingStart="10dp"
+        android:inputType="textPassword"
+        android:fontFamily="sans-serif-smallcaps"
+        android:minHeight="56dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_edittext_bg" />
+
+    <EditText
+        android:id="@+id/validityDateEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Validity Date Ex : (YYYY-MM-DD)"
+        android:minHeight="56dp"
+        android:paddingStart="10dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_edittext_bg" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/registerButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:textColor="#FFFFFF"
+        android:fontFamily="sans-serif-smallcaps"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_edittext_bg"
+        android:backgroundTint="#FF5722"
+        android:minHeight="56dp" />
+
+</LinearLayout>

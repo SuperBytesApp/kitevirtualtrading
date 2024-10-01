@@ -1,0 +1,157 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Money"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/totalmoney"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="00.00"
+        android:minHeight="48dp" />
+
+
+    <!-- Invested -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Invested"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editInvested"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="00.00"
+        android:minHeight="48dp" />
+
+    <!-- Current -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Overall Gain"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/editCurrent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+0.00"
+        android:minHeight="48dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Overall Gain %"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/overallgainpercent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="(+00.00%)"
+        android:minHeight="48dp" />
+
+    <!-- P&L Profit -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Today Loss"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editPLProfit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="-0.00"
+        android:minHeight="48dp" />
+
+    <!-- P&L Percent Profit -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Today's Loss %"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editPLPercentProfit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="(-0.00%)"
+        android:minHeight="48dp" />
+
+
+
+    <!-- RadioGroup for Profit and Loss -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profit / Loss"
+        android:visibility="gone"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioProfit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profit" />
+
+        <RadioButton
+            android:id="@+id/radioLoss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loss" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDialogSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/green"
+            android:text="Save" />
+
+        <!-- Cancel button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDialogCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textColor="@color/white"
+            android:backgroundTint="#FF4343"
+            android:text="Cancel" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

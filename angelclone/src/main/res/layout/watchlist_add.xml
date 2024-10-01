@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#FFFFFF"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:background="@drawable/rounded_edittext_bg"
+        android:hint="Name"
+        android:inputType="textCapCharacters"
+        android:minHeight="48dp"
+        android:paddingStart="@dimen/dp_10" />
+
+    <EditText
+        android:id="@+id/etLastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etName"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:background="@drawable/rounded_edittext_bg"
+        android:hint="Expiry Name"
+        android:inputType="textCapCharacters"
+        android:minHeight="48dp"
+        android:paddingStart="@dimen/dp_10" />
+
+    <EditText
+        android:id="@+id/etNSE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etLastName"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:background="@drawable/rounded_edittext_bg"
+        android:hint="NSE"
+        android:inputType="textCapCharacters"
+        android:minHeight="48dp"
+        android:paddingStart="@dimen/dp_10" />
+
+    <EditText
+        android:id="@+id/etMarketId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etNSE"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:background="@drawable/rounded_edittext_bg"
+        android:hint="INSTRUMENT KEY"
+        android:inputType="textCapCharacters"
+        android:minHeight="48dp"
+        android:paddingStart="@dimen/dp_10"/>
+
+
+    <EditText
+        android:id="@+id/etMarketId2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etMarketId"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:background="@drawable/rounded_edittext_bg"
+        android:hint="NSE_FO:BANKNIFTY24JAN47600CE"
+        android:inputType="textCapCharacters"
+        android:minHeight="48dp"
+        android:paddingStart="@dimen/dp_10"/>
+
+
+    <EditText
+        android:id="@+id/etLOT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etMarketId2"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:background="@drawable/rounded_edittext_bg"
+        android:hint="1 LOT SIZE"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:paddingStart="@dimen/dp_10"/>
+
+    <!-- RadioGroup with two RadioButtons -->
+    <RadioGroup
+        android:id="@+id/indexradioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etLOT"
+        android:layout_marginStart="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioIndex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Index " />
+
+        <RadioButton
+            android:id="@+id/radioFO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Equity F&amp;O"
+            android:layout_marginStart="16dp" />
+
+         <RadioButton
+            android:id="@+id/radioFON"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NIFTY F&amp;O"
+            android:layout_marginStart="16dp" />
+
+
+
+    </RadioGroup>
+
+</RelativeLayout>

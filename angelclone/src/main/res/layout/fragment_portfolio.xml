@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/clMainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_grey">
+
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_ordersTitle"
+                style="@style/barlowSemiBoldMedium"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_70"
+                android:gravity="start|center_vertical"
+                android:paddingLeft="@dimen/dp_16"
+                android:text="@string/holdings"
+                android:textColor="@color/title_black"
+                android:textSize="@dimen/sp_26"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <include
+                android:id="@+id/includeSearchButton"
+                layout="@layout/search_toolbar_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_ordersTitle"
+                app:layout_constraintEnd_toEndOf="@+id/tv_ordersTitle"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_goneMarginEnd="@dimen/dp_20" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_download_portfolio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:tag="binding_1"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_ordersTitle"
+                app:layout_constraintEnd_toStartOf="@+id/includeSearchButton"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_holding_download" />
+
+
+            <View
+                android:id="@+id/viewCurve"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_8"
+                android:background="@drawable/bg_top_curve_shape_40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_ordersTitle" />
+
+            <RelativeLayout
+                android:id="@+id/toolBarContainer"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/viewCurve">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/tlWatchList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="13dp"
+                            android:fontFamily="@font/inter_medium"
+                            android:text="  All  "
+                            android:textColor="@color/primary_blue"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <View
+                            android:id="@+id/view"
+                            android:layout_width="0dp"
+                            android:layout_height="3dp"
+                            android:background="@color/primary_blue"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/textView2"
+                            app:layout_constraintStart_toStartOf="@+id/textView2" />
+
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:fontFamily="@font/inter_medium"
+                            android:text="  Equity  "
+                            android:textColor="@color/body_grey"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toEndOf="@+id/textView2"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <View
+                            android:id="@+id/equity"
+                            android:layout_width="0dp"
+                            android:layout_height="3dp"
+                            android:visibility="gone"
+                            android:background="@color/primary_blue"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/textView3"
+                            app:layout_constraintStart_toStartOf="@+id/textView3" />
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:fontFamily="@font/inter_medium"
+                            android:text="  Mutual Funds  "
+                            android:textColor="@color/body_grey"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toEndOf="@+id/textView3"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_20"
+                            android:fontFamily="@font/inter_semi_bold"
+                            android:text="  SGB  "
+                            android:textColor="@color/body_grey"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toEndOf="@+id/textView4"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+            </RelativeLayout>
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/portfrag"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolBarContainer" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

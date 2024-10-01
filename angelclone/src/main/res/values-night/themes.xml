@@ -1,0 +1,20 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.KiteVirtualTrading" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryVariant">#E91E63</item>
+        <item name="colorOnPrimary">#FF5722</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/purple_500</item>
+        <item name="colorSecondaryVariant">@color/black_holding</item>
+        <item name="colorOnSecondary">#000000</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/background_grey</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+
+
+    <style name="Theme.KiteVirtualTrading" parent="Base.Theme.KiteVirtualTrading" />
+</resources>

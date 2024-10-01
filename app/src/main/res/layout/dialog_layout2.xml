@@ -1,0 +1,153 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:orientation="vertical">
+
+    <!-- Invested -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Invested"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editInvested"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="00.00"
+        android:minHeight="48dp" />
+
+    <!-- Current -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/editCurrent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="00.00"
+        android:minHeight="48dp" />
+
+    <!-- P&L Profit -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="P&amp;L Profit"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editPLProfit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+0.00"
+        android:minHeight="48dp" />
+
+    <!-- P&L Percent Profit -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/p_l_percent_profit"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editPLPercentProfit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+0.00%"
+        android:minHeight="48dp" />
+
+    <!-- Day P&L Profit -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Day P&amp;L Profit"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+
+    <EditText
+        android:id="@+id/editDayPLProfit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+0.00"
+        android:minHeight="48dp" />
+
+    <!-- Day P&L Percent Profit -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Day P&amp;L Percent Profit"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editDayPLPercentProfit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+0.00%"
+        android:minHeight="48dp" />
+
+    <!-- RadioGroup for Profit and Loss -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profit / Loss"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioProfit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profit" />
+
+        <RadioButton
+            android:id="@+id/radioLoss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loss" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnDialogSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="Save" />
+
+        <!-- Cancel button -->
+        <Button
+            android:id="@+id/btnDialogCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:backgroundTint="@color/red"
+            android:text="Cancel" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
