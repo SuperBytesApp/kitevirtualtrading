@@ -1,22 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_grey">
+    android:background="@color/white">
 
-    <androidx.appcompat.widget.AppCompatTextView
+    <TextView
         android:id="@+id/tv_ordersTitle"
         style="@style/barlowSemiBold"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="@dimen/dp_60"
         android:background="@color/background_grey"
         android:gravity="start|center_vertical"
         android:paddingLeft="@dimen/dp_16"
-        android:text="@string/orders"
-        android:textColor="@color/title_black"
+        android:text="Orders  "
+        android:textColor="@color/body_grey"
         android:textSize="@dimen/sp_20"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/barlowSemiBold"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_60"
+        android:background="@color/background_grey"
+        android:gravity="start|center_vertical"
+        android:text="Positions"
+        android:textColor="@color/title_black"
+        android:textSize="@dimen/sp_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_ordersTitle"
         app:layout_constraintTop_toTopOf="parent" />
 
     <include
@@ -54,6 +69,7 @@
         android:id="@+id/viewCurve"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_8"
+        android:visibility="gone"
         android:background="@drawable/bg_top_curve_shape_40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,125 +78,152 @@
     <LinearLayout
         android:id="@+id/toolBarContainer"
         android:layout_width="match_parent"
-        android:layout_height="35dp"
+        android:layout_height="wrap_content"
         android:background="@color/white_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/viewCurve">
 
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clMarketIndices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_explore_static_stock_done"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5">
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clMarketView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0">
 
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="13dp"
-                    android:fontFamily="@font/inter_semi_bold"
-                    android:text="Orders"
-                    android:textColor="@color/body_grey"
-                    android:textSize="13sp"
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="@dimen/dp_2"
+                    android:layout_height="0dp"
+                    android:background="@color/line_grey"
                     app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ivChooseMarket"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-
-                <View
-                    android:id="@+id/view"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clFirstPosIndices"
                     android:layout_width="0dp"
-                    android:layout_height="1.8dp"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="@dimen/dp_5"
-                    android:background="@color/primary_blue"
+                    android:layout_height="match_parent"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/textView3"
-                    app:layout_constraintStart_toStartOf="@+id/textView3" />
+                    app:layout_constraintEnd_toStartOf="@+id/view3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvFirstPosTitle"
+                        style="@style/barlowSemiBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_12"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:text="NIFTY"
+                        android:textColor="@color/body_grey"
+                        android:textSize="@dimen/sp_12"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:fontFamily="@font/inter_semi_bold"
-                    android:text="  Positions   "
-                    android:textColor="@color/primary_blue"
-                    android:textSize="13sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/textView2"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    <TextView
+                        android:id="@+id/tvFirstPosPriceChange"
+                        style="@style/barlowMedium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:drawablePadding="@dimen/dp_2"
+                        android:text="12021.00"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/buy_green"
+                        app:layout_constraintStart_toStartOf="@+id/tvFirstPosTitle"
+                        app:layout_constraintTop_toBottomOf="@+id/tvFirstPosTitle" />
 
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvFirstPosPercentageChange"
+                        style="@style/barlowMediumSmall"
+                        android:layout_width="0dp"
+                        android:layout_height="16dp"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:textColor="@color/body_grey"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvFirstPosPriceChange"
+                        app:layout_constraintStart_toEndOf="@+id/tvFirstPosPriceChange"
+                        app:layout_constraintTop_toTopOf="@+id/tvFirstPosPriceChange" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <View
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clSecondPosIndices"
                     android:layout_width="0dp"
-                    android:layout_height="3dp"
-                    android:background="@color/primary_blue"
+                    android:layout_height="match_parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ivChooseMarket"
+                    app:layout_constraintStart_toEndOf="@+id/view3"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvSecondPosTitle"
+                        style="@style/barlowSemiBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:text="BANKNIFTY"
+                        android:textColor="@color/body_grey"
+                        android:textSize="@dimen/sp_12"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvSecondPosPriceChange"
+                        style="@style/barlowMedium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:drawablePadding="@dimen/dp_2"
+                        android:textColor="@color/buy_green"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvSecondPosTitle" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvSecondPosPercentageChange"
+                        style="@style/barlowMediumSmall"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:layout_marginBottom="@dimen/dp_12"
+                        android:textColor="@color/body_grey"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/tvSecondPosPriceChange"
+                        app:layout_constraintTop_toBottomOf="@+id/tvSecondPosPriceChange" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivChooseMarket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/dp_8"
+                    android:paddingTop="@dimen/dp_12"
+                    android:paddingEnd="@dimen/dp_12"
                     android:visibility="gone"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/textView3"
-                    app:layout_constraintStart_toStartOf="@+id/textView3" />
-
-                <TextView
-                    android:id="@+id/newblink"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="  NEW  "
-                    android:padding="2dp"
-                    android:visibility="gone"
-                    android:background="@drawable/bg_blue_round"
-                    android:textColor="#FFFFFF"
-                    android:textSize="@dimen/dp_7"
-                    android:backgroundTint="@color/red2"
-                    app:layout_constraintBottom_toTopOf="@+id/textView4"
-                    app:layout_constraintEnd_toEndOf="@+id/textView4"
-                    app:layout_constraintTop_toTopOf="@+id/textView4" />
-
-
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:fontFamily="@font/inter_semi_bold"
-                    android:text="Baskets  "
-                    android:textColor="@color/body_grey"
-                    android:textSize="13sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/textView3"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
-                <TextView
-                    android:id="@+id/textView9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/dp_20"
-                    android:fontFamily="@font/inter_semi_bold"
-                    android:text="Stock SIP"
-                    android:textColor="@color/body_grey"
-                    android:textSize="13sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/textView4"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/dp_20"
-                    android:fontFamily="@font/inter_semi_bold"
-                    android:text="  GTT  "
-                    android:textColor="@color/body_grey"
-                    android:textSize="13sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/textView9"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
+                    android:paddingBottom="@dimen/dp_5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_down_arrow_grey" />
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
 
@@ -214,7 +257,8 @@
                 android:id="@+id/cardView9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="gone"
+                android:visibility="gones"
+                app:cardElevation="0dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -228,6 +272,7 @@
                         android:id="@+id/linearLayout4"
                         android:layout_width="0dp"
                         android:layout_height="@dimen/dp_45"
+                        android:visibility="gone"
                         android:layout_margin="10dp"
                         android:background="@drawable/bg_filter_enable_disable"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -271,6 +316,16 @@
 
 
                     </LinearLayout>
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/newupdatepositionimg"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -414,7 +469,6 @@
                     android:id="@+id/layout1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/dp_10"
                     android:layout_marginEnd="@dimen/dp_4"
                     android:tag="layout/row_position_0"
                     android:visibility="gon"
@@ -655,7 +709,7 @@
                             android:orientation="vertical"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintEnd_toStartOf="parent"
-                            app:layout_constraintGuide_percent="0.45"
+                            app:layout_constraintGuide_begin="168dp"
                             app:layout_constraintStart_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -947,7 +1001,6 @@
                     android:id="@+id/layout11"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/dp_10"
                     android:tag="layout/adapter_closed_position_0"
                     android:visibility="gon"
                     app:cardElevation="0dp"
@@ -1382,7 +1435,7 @@
                             android:orientation="vertical"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintEnd_toStartOf="parent"
-                            app:layout_constraintGuide_percent="0.41"
+                            app:layout_constraintGuide_begin="0dp"
                             app:layout_constraintStart_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent" />
 
