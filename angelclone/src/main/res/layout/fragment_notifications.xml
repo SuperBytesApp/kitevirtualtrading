@@ -138,7 +138,10 @@
 
                     <TextView
                         android:id="@+id/tvFirstPosPriceChange"
+
+
                         style="@style/barlowMedium"
+                        mmmm
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/dp_4"
@@ -146,6 +149,7 @@
                         android:text="12021.00"
                         android:textAlignment="textEnd"
                         android:textColor="@color/buy_green"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="@+id/tvFirstPosTitle"
                         app:layout_constraintTop_toBottomOf="@+id/tvFirstPosTitle" />
 
@@ -154,6 +158,7 @@
                         style="@style/barlowMediumSmall"
                         android:layout_width="0dp"
                         android:layout_height="16dp"
+                        android:layout_marginStart="5dp"
                         android:layout_marginTop="@dimen/dp_4"
                         android:textColor="@color/body_grey"
                         app:layout_constraintBottom_toBottomOf="@+id/tvFirstPosPriceChange"
@@ -189,9 +194,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/dp_8"
+                        android:layout_marginStart="@dimen/dp_8"
                         android:layout_marginTop="@dimen/dp_4"
                         android:drawablePadding="@dimen/dp_2"
                         android:textColor="@color/buy_green"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/tvSecondPosTitle" />
 
@@ -201,11 +208,12 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/dp_4"
-                        android:layout_marginBottom="@dimen/dp_12"
+                        android:layout_marginStart="5dp"
                         android:textColor="@color/body_grey"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="@+id/tvSecondPosPriceChange"
-                        app:layout_constraintTop_toBottomOf="@+id/tvSecondPosPriceChange" />
+                        app:layout_constraintBottom_toBottomOf="@+id/tvSecondPosPriceChange"
+                        app:layout_constraintStart_toEndOf="@+id/tvSecondPosPriceChange"
+                        app:layout_constraintTop_toTopOf="@+id/tvSecondPosPriceChange"
+                        app:layout_constraintVertical_bias="1.0" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.appcompat.widget.AppCompatImageView
@@ -257,7 +265,7 @@
                 android:id="@+id/cardView9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="gones"
+                android:visibility="gone"
                 app:cardElevation="0dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -471,7 +479,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/dp_4"
                     android:tag="layout/row_position_0"
-                    android:visibility="gon"
+                    android:visibility="gone"
                     app:cardCornerRadius="@dimen/dp_8"
                     app:cardElevation="0dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -517,10 +525,10 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/dp_16"
-                            android:layout_marginTop="@dimen/dp_8"
+                            app:layout_constraintBottom_toBottomOf="@+id/txtPositionAdapterNetAvgPrice"
                             app:layout_constraintEnd_toStartOf="@+id/txtPositionAdapterPrefixLTP"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/textView">
+                            app:layout_constraintTop_toTopOf="@+id/txtPositionAdapterNetAvgPrice">
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:id="@+id/tv_tag_buy_sell"
@@ -528,10 +536,10 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:background="@drawable/bg_rounded_corner_sell_red12_4r"
+                                android:gravity="center"
                                 android:paddingLeft="@dimen/dp_4"
                                 android:paddingRight="@dimen/dp_4"
                                 android:textAlignment="center"
-                                android:gravity="center"
                                 android:textColor="@color/sell_red"
                                 android:textSize="@dimen/sp_10"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -563,9 +571,9 @@
                                 style="@style/sparkTextViewTAG"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
                                 android:background="@drawable/bg_gray_round_tag"
                                 android:paddingLeft="@dimen/dp_4"
-                                android:layout_marginStart="5dp"
                                 android:paddingTop="@dimen/dp_2"
                                 android:paddingRight="@dimen/dp_4"
                                 android:paddingBottom="@dimen/dp_2"
@@ -577,6 +585,18 @@
                                 app:layout_constraintTop_toTopOf="parent" />
 
 
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvLotSize"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp_6"
+                                android:tag="binding_8"
+                                android:text="(1 Lot = 25)"
+                                android:textColor="@color/body_grey"
+                                android:textSize="@dimen/sp_11"
+                                app:layout_constraintBottom_toBottomOf="@+id/nsetag"
+                                app:layout_constraintStart_toEndOf="@+id/nsetag"
+                                app:layout_constraintTop_toTopOf="@+id/nsetag" />
 
 
                         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -584,67 +604,65 @@
                         <com.google.android.material.textview.MaterialTextView
                             android:id="@+id/txtPositionAdapterQuantity"
                             style="@style/barlowRegularSmall"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/dp_6"
+                            android:layout_width="6dp"
+                            android:layout_height="10dp"
                             android:tag="binding_6"
-                            android:textSize="@dimen/sp_11"
+                            android:text=" • "
                             android:textColor="@color/title_black"
-                            app:layout_constraintStart_toStartOf="@+id/flexTags"
-                            app:layout_constraintTop_toBottomOf="@+id/flexTags" />
-
-                        <com.google.android.material.textview.MaterialTextView
-                            android:id="@+id/textView22"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:tag="binding_6"
-                            android:textColor="@color/title_black"
-                            android:textSize="@dimen/sp_11"
-                            app:layout_constraintBottom_toBottomOf="@+id/txtPositionAdapterQuantity"
-                            app:layout_constraintStart_toEndOf="@+id/txtPositionAdapterQuantity" />
-
-                        <com.google.android.material.textview.MaterialTextView
-                            android:id="@+id/tvLotSize"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/dp_4"
-                            android:tag="binding_8"
-                            android:textColor="@color/body_grey"
                             android:textSize="@dimen/sp_11"
                             app:layout_constraintBottom_toBottomOf="@+id/textView22"
                             app:layout_constraintStart_toEndOf="@+id/textView22"
                             app:layout_constraintTop_toTopOf="@+id/textView22" />
 
                         <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/textView22"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginEnd="@dimen/dp_2"
-                            android:text="@string/avg_with_rs"
+                            android:tag="binding_6"
+                            android:text="1 Lot "
+                            android:textColor="@color/title_black"
+                            android:textSize="@dimen/sp_11"
+                            app:layout_constraintBottom_toTopOf="@+id/flexTags"
+                            app:layout_constraintStart_toStartOf="@+id/textView"
+                            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/materialTextView21"
+                            android:layout_width="wrap_content"
+                            android:layout_height="14dp"
+                            android:text=" Avg."
                             android:textColor="@color/body_grey"
                             android:textSize="@dimen/sp_11"
                             app:layout_constraintBottom_toBottomOf="@+id/textView26"
-                            app:layout_constraintEnd_toStartOf="@+id/textView26" />
+                            app:layout_constraintStart_toEndOf="@+id/txtPositionAdapterQuantity" />
 
                         <com.google.android.material.textview.MaterialTextView
                             android:id="@+id/textView26"
                             style="@style/barlowRegularSmall"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginEnd="@dimen/dp_2"
                             android:tag="binding_9"
-                            android:text="₹0.00"
+                            android:text="0.00"
+                            android:layout_marginStart="2dp"
                             android:textSize="@dimen/sp_12"
-                            app:layout_constraintBottom_toBottomOf="@+id/txtPositionAdapterNetAvgPrice"
-                            app:layout_constraintEnd_toStartOf="@+id/txtPositionAdapterNetAvgPrice" />
+                            app:layout_constraintBottom_toBottomOf="@+id/textView22"
+                            app:layout_constraintStart_toEndOf="@+id/materialTextView21"
+                            app:layout_constraintTop_toTopOf="@+id/textView22" />
 
                         <com.google.android.material.textview.MaterialTextView
                             android:id="@+id/txtPositionAdapterNetAvgPrice"
-                            style="@style/barlowRegularSmall"
+                            style="@style/barlowRegularLarge"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/dp_8"
                             android:layout_marginEnd="@dimen/dp_16"
                             android:tag="binding_9"
+                            android:text="EXIT AT MARKET"
+                            android:textColor="@color/hv_primary"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/textView29" />
 
@@ -1002,7 +1020,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:tag="layout/adapter_closed_position_0"
-                    android:visibility="gon"
+                    android:visibility="gone"
                     app:cardElevation="0dp"
                     app:cardCornerRadius="@dimen/dp_8"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -1066,13 +1084,17 @@
                             app:layout_constraintBaseline_toBaselineOf="@+id/textView22sda"
                             app:layout_constraintLeft_toRightOf="@+id/textView22sda" />
 
-                        <View
+
+
+                        <com.google.android.material.textview.MaterialTextView
                             android:id="@+id/viewSeperator"
-                            android:layout_width="@dimen/dp_1"
-                            android:layout_height="@dimen/dp_0"
-                            android:layout_marginStart="@dimen/dp_4"
-                            android:background="@color/battleship_grey"
-                            android:paddingTop="@dimen/dp_2"
+                            style="@style/barlowRegularSmall"
+                            android:layout_width="6dp"
+                            android:layout_height="10dp"
+                            android:tag="binding_6"
+                            android:text=" • "
+                            android:textColor="@color/title_black"
+                            android:textSize="@dimen/sp_11"
                             app:layout_constraintBottom_toBottomOf="@+id/txtClosedPosQtyUnit"
                             app:layout_constraintStart_toEndOf="@+id/txtClosedPosQtyUnit"
                             app:layout_constraintTop_toTopOf="@+id/txtClosedPosQtyUnit" />

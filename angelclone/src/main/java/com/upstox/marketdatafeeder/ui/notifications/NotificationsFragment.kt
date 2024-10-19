@@ -190,7 +190,7 @@ class NotificationsFragment : Fragment() {
                 binding.textView24.text = userData.last
                 binding.textView26.text = formatIntWithDecimal(userData.avg.toDouble())
                 binding.textView22.text = userData.lot
-                binding.tvLotSize.text = "Lot (1 Lot = ${userData.qty})"
+                binding.tvLotSize.text = "(1 Lot = ${userData.qty})"
                 binding.textViewsda.text = userData.name
                 binding.textView24sda.text = userData.last
                 binding.nsetag.text = userData.nse

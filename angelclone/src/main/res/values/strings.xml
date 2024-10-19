@@ -364,7 +364,7 @@
     <string name="buy_now">Buy Now</string>
     <string name="buy_order_price">Buy Order Price</string>
     <string name="buy_price">BUY PRICES</string>
-    <string name="buy_price_title">Buy Price</string>
+    <string name="buy_price_title">Buy</string>
     <string name="buy_put">Buy Put</string>
     <string name="buy_stop_loss_order_msg">Buy Stop Loss orders help you keep your order within your budget.</string>
     <string name="buy_stop_loss_order_msg_part_1">To place a</string>
@@ -2140,7 +2140,7 @@
     <string name="sell_now">Sell Now</string>
     <string name="sell_order_price">Sell Order Price</string>
     <string name="sell_price">Sell Prices</string>
-    <string name="sell_price_title">Sell Price</string>
+    <string name="sell_price_title">Sell</string>
     <string name="sell_stop_loss_order_msg">Sell Stop Loss orders help you keep you cap your losses within a limit.</string>
     <string name="sell_stop_loss_order_msg_part_1">To place a</string>
     <string name="sell_stop_loss_order_msg_part_2">Sell Stop Loss</string>
