@@ -375,7 +375,7 @@ class WatchlistAdapter(private val itemList: List<WachlistData>, private val con
 
                 // Log the JSON response for debugging
 
-                Log.d("url", "$jsonResponse")
+
 
 
                 // Parse the JSON response

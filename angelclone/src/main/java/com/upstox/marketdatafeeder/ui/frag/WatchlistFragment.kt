@@ -238,21 +238,21 @@ class WatchlistFragment : Fragment() , WebSocketCallback {
         val marketExp2Value = sharedPreferences.getString(marketExp2Key, "")
         val exp1 = sharedPreferences.getString(exp, "")
         val exps2 = sharedPreferences.getString(exp2, "")
-        binding.expy1.text = marketExp1Value
-        binding.expy2.text = marketExp2Value
-
-        if (exp1 != null && exp1 == "r"){
-            val textColor = ContextCompat.getColor(requireContext(), R.color.red2)
-            binding.expy1.setTextColor(textColor)
-            binding.bgexp.setBackgroundResource(R.drawable.nifty_background3)
-
-        }
-        if (exps2 != null && exps2 == "r"){
-            val textColor = ContextCompat.getColor(requireContext(), R.color.red2)
-            binding.expy2.setTextColor(textColor)
-            binding.bgexp2.setBackgroundResource(R.drawable.nifty_background3)
-
-        }
+//        binding.expy1.text = marketExp1Value
+//        binding.expy2.text = marketExp2Value
+//
+//        if (exp1 != null && exp1 == "r"){
+//            val textColor = ContextCompat.getColor(requireContext(), R.color.red2)
+//            binding.expy1.setTextColor(textColor)
+//            binding.bgexp.setBackgroundResource(R.drawable.nifty_background3)
+//
+//        }
+//        if (exps2 != null && exps2 == "r"){
+//            val textColor = ContextCompat.getColor(requireContext(), R.color.red2)
+//            binding.expy2.setTextColor(textColor)
+//            binding.bgexp2.setBackgroundResource(R.drawable.nifty_background3)
+//
+//        }
 
         requireActivity().getSharedPreferences(sharedPreferencesFileName, Context.MODE_PRIVATE)
 
@@ -340,9 +340,6 @@ class WatchlistFragment : Fragment() , WebSocketCallback {
                     val resolvedColor = ContextCompat.getColor(requireContext(), R.color.buy_green)
                     binding.tvFirstPosPriceChange.setTextColor(resolvedColor)
                     // Change drawable icon programmatically
-                    val yourDrawableIcon: Drawable? = requireActivity().resources.getDrawable(R.drawable.ic_arrow_gain)
-                    binding.tvFirstPosPriceChange.setCompoundDrawablesWithIntrinsicBounds(null, null, yourDrawableIcon, null)
-                    binding.tvFirstPosPriceChange.compoundDrawablePadding = 8
                     val newPrice = ltp0 - close
                     val perc = newPrice / close * 100
                     binding.tvFirstPosPercentageChange.text =  "+${formatIntWithDecimal(newPrice)} (+${formatIntWithDecimal(perc)}%)"
@@ -353,9 +350,6 @@ class WatchlistFragment : Fragment() , WebSocketCallback {
                     val resolvedColor = ContextCompat.getColor(requireContext(), R.color.sell_red)
                     binding.tvFirstPosPriceChange.setTextColor(resolvedColor)
                     // Change drawable icon programmatically
-                    val yourDrawableIcon: Drawable? = requireActivity().resources.getDrawable(R.drawable.ic_arrow_loss)
-                    binding.tvFirstPosPriceChange.setCompoundDrawablesWithIntrinsicBounds(null, null, yourDrawableIcon, null)
-                    binding.tvFirstPosPriceChange.compoundDrawablePadding = 8
 
                     val newPrice = ltp0 - close
                     val perc = newPrice / close * 100
@@ -403,9 +397,6 @@ class WatchlistFragment : Fragment() , WebSocketCallback {
             val resolvedColor = ContextCompat.getColor(requireContext(), R.color.buy_green)
             binding.tvSecondPosPriceChange.setTextColor(resolvedColor)
             // Change drawable icon programmatically
-            val yourDrawableIcon: Drawable? = requireActivity().resources.getDrawable(R.drawable.ic_arrow_gain)
-            binding.tvSecondPosPriceChange.setCompoundDrawablesWithIntrinsicBounds(null, null, yourDrawableIcon, null)
-            binding.tvSecondPosPriceChange.compoundDrawablePadding = 8
 
             val newPrice = ltp - cp
             val perc = newPrice / cp * 100
@@ -418,9 +409,7 @@ class WatchlistFragment : Fragment() , WebSocketCallback {
             val resolvedColor = ContextCompat.getColor(requireContext(), R.color.sell_red)
             binding.tvSecondPosPriceChange.setTextColor(resolvedColor)
             // Change drawable icon programmatically
-            val yourDrawableIcon: Drawable? = requireActivity().resources.getDrawable(R.drawable.ic_arrow_loss)
-            binding.tvSecondPosPriceChange.setCompoundDrawablesWithIntrinsicBounds(null, null, yourDrawableIcon, null)
-            binding.tvSecondPosPriceChange.compoundDrawablePadding = 8
+
             val newPrice = ltp - cp
             val perc = newPrice / cp * 100
             binding.tvSecondPosPercentageChange.text =  "${formatIntWithDecimal(newPrice)} (${formatIntWithDecimal(perc)}%)"
