@@ -28,7 +28,7 @@
         android:background="@color/background_grey"
         android:gravity="start|center_vertical"
         android:text=" Positions"
-        android:textColor="@color/title_black"
+        android:textColor="#1B1B1B"
         android:textSize="@dimen/sp_20"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tv_ordersTitle"
@@ -131,7 +131,7 @@
                         android:layout_marginStart="@dimen/dp_12"
                         android:layout_marginTop="@dimen/dp_10"
                         android:text="NIFTY"
-                        android:textColor="@color/body_grey"
+                        android:textColor="#1B1B1B"
                         android:textSize="@dimen/sp_12"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -144,9 +144,9 @@
                         android:layout_marginTop="@dimen/dp_4"
                         android:layout_marginBottom="@dimen/dp_10"
                         android:drawablePadding="@dimen/dp_2"
-                        android:text="12021.00"
                         android:textAlignment="textEnd"
-                        android:textColor="@color/buy_green"
+                        android:fontFamily="@font/app_font_medium"
+                        android:textColor="@color/sell_red"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="@+id/tvFirstPosTitle"
                         app:layout_constraintTop_toBottomOf="@+id/tvFirstPosTitle" />
@@ -181,7 +181,7 @@
                         android:layout_marginStart="@dimen/dp_8"
                         android:layout_marginTop="@dimen/dp_10"
                         android:text="BANKNIFTY"
-                        android:textColor="@color/body_grey"
+                        android:textColor="#1B1B1B"
                         android:textSize="@dimen/sp_12"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -373,8 +373,8 @@
                     android:drawablePadding="@dimen/dp_10"
                     android:text="Total"
                     android:textSize="14sp"
+                    android:textColor="#000000"
                     android:fontFamily="@font/inter_regular"
-                    android:textColor="#252525"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/totalgainimg"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -386,7 +386,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"
                     android:drawablePadding="10dp"
-                    android:fontFamily="@font/messina_sans_semi_bold"
+                    android:fontFamily="@font/app_font_medium"
                     android:text="₹0.00"
                     android:drawableRight="@drawable/ic_arrow_up"
                     android:textColor="#252525"
@@ -431,10 +431,8 @@
                     android:id="@+id/layout1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/dp_4"
                     android:tag="layout/row_position_0"
                     android:visibility="gone"
-                    app:cardCornerRadius="@dimen/dp_8"
                     app:cardElevation="0dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -444,10 +442,19 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@color/card_background_color"
-                        android:paddingBottom="@dimen/dp_12"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/dp_12"
+                            android:background="@color/line_grey"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/flexTags" />
+
 
                         <com.google.android.material.textview.MaterialTextView
                             android:id="@+id/textView"
@@ -458,6 +465,7 @@
                             android:layout_marginTop="@dimen/dp_12"
                             android:tag="binding_1"
                             android:text="NIFTY"
+                            android:textColor="#1B1B1B"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
@@ -514,6 +522,7 @@
                                 android:paddingBottom="@dimen/dp_2"
                                 android:tag="binding_5"
                                 android:text="INTRADAY"
+                                android:textColor="#1B1B1B"
                                 android:textSize="@dimen/sp_10"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintStart_toEndOf="@+id/tv_tag_buy_sell"
@@ -533,6 +542,7 @@
                                 android:paddingBottom="@dimen/dp_2"
                                 android:tag="binding_5"
                                 android:text="NSE FO"
+                                android:textColor="#1B1B1B"
                                 android:textSize="@dimen/sp_10"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintStart_toEndOf="@+id/exg_tag"
@@ -546,7 +556,7 @@
                                 android:layout_marginStart="@dimen/dp_6"
                                 android:tag="binding_8"
                                 android:text="(1 Lot = 25)"
-                                android:textColor="@color/body_grey"
+                                android:textColor="#1B1B1B"
                                 android:textSize="@dimen/sp_11"
                                 app:layout_constraintBottom_toBottomOf="@+id/nsetag"
                                 app:layout_constraintStart_toEndOf="@+id/nsetag"
@@ -562,7 +572,7 @@
                             android:layout_height="10dp"
                             android:tag="binding_6"
                             android:text=" • "
-                            android:textColor="@color/title_black"
+                            android:textColor="#1B1B1B"
                             android:textSize="@dimen/sp_11"
                             app:layout_constraintBottom_toBottomOf="@+id/textView22"
                             app:layout_constraintStart_toEndOf="@+id/textView22"
@@ -574,7 +584,7 @@
                             android:layout_height="wrap_content"
                             android:tag="binding_6"
                             android:text="1 Lot "
-                            android:textColor="@color/title_black"
+                            android:textColor="#1B1B1B"
                             android:textSize="@dimen/sp_11"
                             app:layout_constraintBottom_toTopOf="@+id/flexTags"
                             app:layout_constraintStart_toStartOf="@+id/textView"
@@ -586,7 +596,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="14dp"
                             android:text=" Avg."
-                            android:textColor="@color/body_grey"
+                            android:textColor="#1B1B1B"
                             android:textSize="@dimen/sp_11"
                             app:layout_constraintBottom_toBottomOf="@+id/textView26"
                             app:layout_constraintStart_toEndOf="@+id/txtPositionAdapterQuantity" />
@@ -596,9 +606,10 @@
                             style="@style/barlowRegularSmall"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
                             android:tag="binding_9"
                             android:text="0.00"
-                            android:layout_marginStart="2dp"
+                            android:textColor="#1B1B1B"
                             android:textSize="@dimen/sp_12"
                             app:layout_constraintBottom_toBottomOf="@+id/textView22"
                             app:layout_constraintStart_toEndOf="@+id/materialTextView21"
@@ -627,7 +638,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="@dimen/dp_4"
                             android:text="@string/ltp_prefix"
-                            android:textColor="@color/body_grey"
+                            android:textColor="#1B1B1B"
                             app:layout_constraintBottom_toBottomOf="@+id/ltpprecent"
                             app:layout_constraintEnd_toStartOf="@+id/textView29"
                             app:layout_constraintTop_toTopOf="@+id/ltpprecent" />
@@ -640,6 +651,7 @@
                             android:layout_marginEnd="@dimen/dp_4"
                             android:tag="binding_10"
                             android:text="82738"
+                            android:textColor="#1B1B1B"
                             app:layout_constraintBottom_toBottomOf="@+id/ltpprecent"
                             app:layout_constraintEnd_toStartOf="@+id/ltpprecent"
                             app:layout_constraintTop_toTopOf="@+id/ltpprecent" />
@@ -654,7 +666,7 @@
                             android:gravity="center"
                             android:tag="binding_11"
                             android:text="(+0.61%)"
-                            android:textColor="@color/light_body_grey"
+                            android:textColor="#1B1B1B"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/textView27" />
 
@@ -667,7 +679,7 @@
                             android:layout_marginEnd="@dimen/dp_8"
                             android:tag="binding_12"
                             android:text="08-Aug-23 20150 CE"
-                            android:textColor="@color/body_grey"
+                            android:textColor="#1B1B1B"
                             app:layout_constraintBottom_toBottomOf="@+id/textView"
                             app:layout_constraintEnd_toStartOf="@+id/textView27"
                             app:layout_constraintStart_toEndOf="@+id/textView"
@@ -691,8 +703,6 @@
                     android:id="@+id/layout2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/dp_10"
-                    android:layout_marginEnd="@dimen/dp_4"
                     android:tag="layout/row_position_0"
                     android:visibility="gone"
                     app:cardCornerRadius="@dimen/dp_8"
@@ -704,11 +714,18 @@
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@color/card_background_color"
-                        android:paddingBottom="@dimen/dp_12"
+                        android:background="@color/white"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/dp_12"
+                            android:background="@color/line_grey"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tvLotSize2" />
 
                         <com.google.android.material.textview.MaterialTextView
                             android:id="@+id/textVieww"

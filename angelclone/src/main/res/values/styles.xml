@@ -6656,13 +6656,13 @@
         <item name="android:textSize">@dimen/sp_12</item>
     </style>
     <style name="barlowMedium" parent="@style/mediumBarlow">
-        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:textSize">@dimen/sp_13</item>
     </style>
     <style name="barlowMediumLarge" parent="@style/mediumBarlow">
         <item name="android:textSize">@dimen/sp_16</item>
     </style>
     <style name="barlowMediumSmall" parent="@style/mediumBarlow">
-        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:textSize">@dimen/sp_11</item>
     </style>
     <style name="barlowRegularqw" parent="@style/Widget.MaterialComponents.TextView">
         <item name="android:textColor">@color/title_black</item>

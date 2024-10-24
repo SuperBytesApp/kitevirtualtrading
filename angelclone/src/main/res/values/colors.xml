@@ -543,7 +543,7 @@
     <color name="secondary_yellow_tint_without_12">#fef7ea</color>
     <color name="secondary_yellow_tint_without_24">#fef7ea</color>
     <color name="seekbar_color">#273646</color>
-    <color name="sell_red">#d64d4d</color>
+    <color name="sell_red">#D5555E</color>
     <color name="sell_red12">#1ed64d4d</color>
     <color name="sell_red24">#3dd64d4d</color>
     <color name="sell_red40">#40d64d4d</color>
