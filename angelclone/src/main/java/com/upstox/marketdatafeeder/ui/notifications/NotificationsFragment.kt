@@ -797,13 +797,12 @@ class NotificationsFragment : Fragment(), WebSocketCallback {
     }
 
 
-
-
     override fun onLtpReceived(ltp: Double, cp: Double) {
 
         if (ltp >= cp){
             val resolvedColor = ContextCompat.getColor(requireContext(), R.color.buy_green)
             binding.tvSecondPosPriceChange.setTextColor(resolvedColor)
+
             // Change drawable icon programmatically
 
             val newPrice = ltp - cp
@@ -812,10 +811,11 @@ class NotificationsFragment : Fragment(), WebSocketCallback {
 
 
 
-        }else{
+        }else{                     
 
             val resolvedColor = ContextCompat.getColor(requireContext(), R.color.sell_red)
             binding.tvSecondPosPriceChange.setTextColor(resolvedColor)
+
             // Change drawable icon programmatically
 
             val newPrice = ltp - cp
